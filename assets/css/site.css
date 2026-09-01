@@ -120,24 +120,41 @@ body.travado{overflow:hidden}
   line-height:1;color:var(--laranja-2);letter-spacing:-.03em}
 .hero__n span{font-size:.86rem;color:rgba(255,255,255,.74);letter-spacing:.01em}
 
-/* fita de marcas -------------------------------------------- */
-.fita{background:var(--azul);color:#fff;overflow:hidden;position:relative;
-  padding-block:clamp(1.1rem,2.2vw,1.7rem)}
-/* mascara nao esmaece, ela fura e mostra a pagina atras. Duas camadas da
-   propria cor por cima resolvem sem furo. */
-.fita::before,.fita::after{content:'';position:absolute;top:0;bottom:0;z-index:2;
-  width:clamp(48px,8vw,140px);pointer-events:none}
-.fita::before{left:0;background:linear-gradient(90deg,var(--azul) 12%,rgba(24,48,132,0))}
-.fita::after{right:0;background:linear-gradient(270deg,var(--azul) 12%,rgba(24,48,132,0))}
-.fita__t{display:flex;width:max-content}
-.fita__l{display:flex;list-style:none;width:max-content;animation:corre 48s linear infinite}
-.fita__l li{display:flex;align-items:center;white-space:nowrap;font-family:var(--display);
-  font-weight:600;font-size:clamp(1rem,1.9vw,1.5rem);letter-spacing:-.01em;
-  padding-inline:clamp(.85rem,1.7vw,1.4rem);color:rgba(255,255,255,.92)}
-.fita__l li::after{content:'';width:6px;height:6px;margin-left:clamp(.85rem,1.7vw,1.4rem);
-  background:var(--laranja);border-radius:50%;flex:none}
-@keyframes corre{to{transform:translateX(-50%)}}
-.fita:hover .fita__l{animation-play-state:paused}
+/* onda -------------------------------------------------------
+   A curva e a assinatura visual do site antigo deles, e a unica coisa dali
+   que valia manter. La ela ocupava meia tela e era chapada de laranja; aqui
+   e uma faixa fina que so costura uma secao na outra. O SVG usa
+   preserveAspectRatio="none", entao estica na largura sem deformar a altura. */
+.onda{position:relative;line-height:0;overflow:hidden}
+.onda svg{display:block;width:100%;height:clamp(38px,5vw,80px)}
+.onda--sobe svg{transform:rotate(180deg)}
+
+/* faixa de marcas ------------------------------------------
+   Fundo azul com logotipo branco: e como o cliente ja apresenta as marcas, e
+   os arquivos que eles tem sao justamente a versao monocromatica branca. */
+.marcas{background:var(--azul);color:#fff}
+.marcas__g{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:clamp(1.4rem,3vw,2.8rem);align-items:center;margin-top:clamp(2rem,3.4vw,2.8rem)}
+.marcas__g img{width:100%;max-width:150px;height:auto;margin-inline:auto;
+  opacity:.9;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.marcas__g a:hover img,.marcas__g li:hover img{opacity:1;transform:translateY(-2px)}
+.marcas__g li{list-style:none;display:grid;place-items:center}
+
+/* equipes ----------------------------------------------------
+   O site antigo tinha "Conheca nossa familia" com as equipes em circulos, e
+   era a parte mais humana dele. Mantido, com a moldura mais discreta. */
+.equipes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:clamp(2.4rem,4vw,3.4rem)}
+.equipe{display:grid;gap:.9rem;justify-items:center;text-align:center}
+.equipe__f{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;
+  background:var(--papel-3);box-shadow:0 0 0 3px var(--papel),0 0 0 5px var(--laranja);
+  transition:box-shadow .35s var(--ease)}
+.equipe:hover .equipe__f{box-shadow:0 0 0 3px var(--papel),0 0 0 5px var(--azul)}
+.equipe__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.equipe:hover .equipe__f img{transform:scale(1.05)}
+.equipe b{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.015em}
+.equipe span{font-size:.86rem;color:var(--tinta-3);display:block;margin-top:.1rem}
+
 
 /* diferenciais ---------------------------------------------- */
 .dif{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.8rem,3.6vw,3.2rem)}
@@ -253,6 +270,8 @@ body.travado{overflow:hidden}
   .lojas{grid-template-columns:1fr;gap:1.4rem}
   .loja{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
   .loja__f{aspect-ratio:1}
+  .marcas__g{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .equipes{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rodape__t{grid-template-columns:1fr 1fr}
   .rodape__m{grid-column:1/-1}
 }
@@ -265,6 +284,7 @@ body.travado{overflow:hidden}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr))}
   .loja{grid-template-columns:1fr}
   .loja__f{aspect-ratio:16/10}
+  .marcas__g{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 1.2rem}
   .corpo,.faq p,.dif__i p{font-size:.95rem}
 }
 @media (prefers-reduced-motion:reduce){
@@ -272,5 +292,5 @@ body.travado{overflow:hidden}
   *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
   [data-sobe]{opacity:1;transform:none}
   /* sem animacao a fita precisa nascer parada, e nao cortada */
-  .fita__l,.vitrine__t{animation:none}
+  .vitrine__t{animation:none}
 }

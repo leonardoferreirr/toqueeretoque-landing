@@ -41,6 +41,37 @@ O Raio-X responde perguntas que a landing precisa refletir, e nem todas são
   Boa parte das vendas vem de indicação de projeto, por isso a última pergunta
   do FAQ é dedicada a profissionais.
 
+## O que veio do site antigo deles
+
+A primeira versão desta landing ficou parecida demais com as outras que fiz para
+clientes de revestimento, e virou template. A correção foi partir do site antigo
+do cliente e ficar com o que ali tinha personalidade:
+
+- **A curva entre seções.** Lá ela ocupava meia tela e era chapada de laranja;
+  aqui é uma faixa fina de 40 a 80px que só costura uma seção na outra. É a
+  assinatura visual deles e a única coisa daquele site que valia manter.
+- **A faixa de marcas em azul com logotipo branco.** É como o cliente já
+  apresenta os parceiros, e os arquivos que eles têm são justamente a versão
+  monocromática branca.
+- **A seção de equipes em círculo.** Era a parte mais humana do site antigo
+  ("Conheça nossa família"). Numa compra de ticket alto e presencial, saber quem
+  vai atender pesa. Mantida, com a moldura mais discreta.
+
+## Os logotipos das marcas
+
+Os dez vieram da biblioteca de mídia do próprio cliente. Nove já eram versão
+branca sobre transparente. **A Tramontina deu trabalho e vale o registro:** o
+arquivo dela é uma caixa azul sólida com o texto em *recorte*, não em tinta
+branca. Filtrar por "pixel branco" não acha nada, e filtrar por "pixel azul"
+descarta as letras, porque em pixel totalmente transparente o RGB é lixo
+(`43,43,41`) e não azul. O jeito que funciona é achar o retângulo da caixa pelo
+alfa, encolher a margem para descartar o canto arredondado, e **inverter o alfa**
+dentro dele.
+
+A **Decortiles** também precisou de tratamento: o logotipo empilha símbolo e
+palavra, então ao normalizar pela caixa a palavra encolhia e a marca aparecia
+menor que as vizinhas. Ficou só a palavra.
+
 ## Identidade
 
 Paleta amostrada do logotipo, não escolhida no olho:
