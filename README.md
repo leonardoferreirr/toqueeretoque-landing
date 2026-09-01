@@ -104,8 +104,11 @@ Tipografia: Archivo (display, casa com o logotipo geométrico) + Manrope
   ("Conversar com um especialista"), mas quem clica no card de Taquara abre a
   conversa dizendo que quer falar com Taquara. É invisível para o visitante e
   útil para quem atende.
-- **A fita e a vitrine esmaecem com camada de cor, não com máscara.** Máscara
-  não esmaece, ela fura, e o que apareceria nas bordas seria o fundo da página.
+- **A vitrine esmaece com camada de cor, não com máscara.** Máscara não esmaece,
+  ela fura, e o que apareceria nas bordas seria o fundo da página.
+- **As curvas são SVG com `preserveAspectRatio="none"`**, então esticam na
+  largura sem deformar a altura. O `.onda` carrega a cor da seção de cima e o
+  `path` é preenchido com a cor da de baixo.
 
 ## Gate
 
@@ -119,10 +122,11 @@ infla o LCP em cerca de 9 pontos):
 
 CLS zero. Duas rodadas por formato, para descartar cold start.
 
-Verificado em Chromium e WebKit, em desktop, tablet e mobile: 8 seções, 11 CTAs
-todos com o mesmo texto, galeria em largura única, nenhuma foto quebrada, sem
-overflow horizontal, zero erro de JS. Os cinco caminhos de CTA testados ponta a
-ponta, cada um chegando ao WhatsApp com a sua frase.
+Verificado em Chromium e WebKit, em desktop, tablet e mobile: 10 seções, 5
+curvas com altura consistente, 10 logotipos, 4 equipes, 12 CTAs todos com o
+mesmo texto, galeria em largura única, nenhuma foto quebrada, sem overflow
+horizontal, zero erro de JS. Os caminhos de CTA testados ponta a ponta, cada um
+chegando ao WhatsApp com a sua frase.
 
 ## A confirmar com o cliente
 
@@ -135,5 +139,7 @@ ponta, cada um chegando ao WhatsApp com a sua frase.
   Taquara, Gramado e Novo Hamburgo, então Palhoça ficou fora da seção de lojas.
 - **Os números do hero** (25 anos, 3 lojas) vieram do título da página do site
   atual e do briefing. Confirmar se seguem corretos.
-- **As marcas da fita** vieram do briefing e do site. Confirmar se todas seguem
-  ativas como parceiras antes de publicar.
+- **Os dez logotipos** vieram da biblioteca de mídia do próprio cliente.
+  Confirmar se todas as marcas seguem ativas como parceiras antes de publicar.
+- **A Deca aparece no briefing mas não tem logotipo** na biblioteca deles, então
+  ficou fora da faixa. Se for parceira ativa, vale pedir o arquivo.
