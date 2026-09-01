@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Abrindo o WhatsApp · Toque &amp; Retoque</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-latin.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin.woff2') format('woff2');font-weight:300 500;font-display:swap}
+*{margin:0;box-sizing:border-box}
+body{font-family:'Manrope',system-ui,sans-serif;font-weight:300;background:#0E1C4F;color:#EDE7DC;
+  min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem}
+.caixa{max-width:38ch}
+.los{width:46px;height:46px;margin:0 auto 1.6rem}
+h1{font-family:'Archivo',Georgia,serif;font-weight:400;font-size:2rem;line-height:1.14;
+  margin-bottom:.75rem;color:#FF7038}
+.it{font-style:italic;color:#F05418}
+p{color:rgba(237,231,220,.72);font-size:.98rem;line-height:1.64}
+.giro{width:32px;height:32px;margin:1.9rem auto 0;border:2px solid rgba(208,192,160,.22);
+  border-top-color:#F05418;border-radius:50%;animation:g 1s linear infinite}
+@keyframes g{to{transform:rotate(360deg)}}
+.manual{margin-top:1.6rem;display:none}
+.manual a{display:inline-flex;align-items:center;min-height:48px;border:1px solid rgba(208,192,160,.4);
+  border-radius:2px;padding:.8rem 1.6rem;font-size:.92rem;color:#FF7038;text-decoration:none}
+.manual a:hover{border-color:#F05418;background:rgba(208,192,160,.1)}
+a{color:#F05418}
+@media (prefers-reduced-motion:reduce){.giro{animation:none}}
+</style>
+</head>
+<body>
+<div class="caixa">
+  <svg class="los" viewBox="0 0 64 64" aria-hidden="true" fill="#F05418">
+    <rect x="8" y="8" width="21" height="21" rx="1.5"/>
+    <rect x="34" y="12" width="16" height="16" rx="1.5" opacity=".62"/>
+    <rect x="11" y="35" width="16" height="16" rx="1.5" opacity=".62"/>
+    <rect x="32" y="33" width="21" height="21" rx="1.5"/>
+  </svg>
+  <h1>Abrindo o seu <span class="it">WhatsApp</span></h1>
+  <p id="msg">Um instante, estamos levando você para a conversa com a Toque &amp; Retoque.</p>
+  <div class="giro" id="giro"></div>
+  <div class="manual" id="manual"><a id="ir" href="#">Abrir a conversa</a></div>
+</div>
+<script>
+(function(){
+  function q(k){ return new URLSearchParams(location.search).get(k) || ''; }
+  var n = q('n'), t = q('t') || '';
+
+  // Servidor com URL limpa redireciona /obrigado.html para /obrigado, e ha
+  // quem descarte a query nesse pulo. O site guarda os mesmos dados no
+  // sessionStorage antes de sair, entao aqui eles sao recuperados e o lead
+  // nao chega no WhatsApp com a conversa em branco.
+  if (!n) {
+    try {
+      var g = JSON.parse(sessionStorage.getItem('tr_wa') || '{}');
+      n = g.n || ''; t = g.t || t;
+    } catch (e) {}
+  }
+  try { sessionStorage.removeItem('tr_wa'); } catch (e) {}
+
+  var valido = n && /^[0-9]{10,15}$/.test(n);
+  var alvo = valido ? ('https://wa.me/' + n + (t ? ('?text=' + encodeURIComponent(t)) : '')) : '';
+
+  // evento de conversao: funciona quando houver GTM ou pixel, inofensivo sem
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'whatsapp_click', destino: 'Toque &amp; Retoque' });
+
+  var manual = document.getElementById('manual'), ir = document.getElementById('ir'),
+      giro = document.getElementById('giro'), msg = document.getElementById('msg');
+
+  var partiu = false;
+  function vai(){ if (partiu) return; partiu = true; location.href = alvo; }
+
+  // AO INSTALAR GTM/PIXEL AQUI, trocar a linha do redirecionamento por:
+  //   setTimeout(function(){ if (window.google_tag_manager) vai(); }, 1500);
+  //   setTimeout(vai, 2400);
+  // Motivo: sair da pagina mata o script que ainda nao rodou. Se a tag nao tiver
+  // carregado na hora do redirect, o clique nao e contado em lugar nenhum, e e
+  // pra contar esse clique que esta pagina existe. O teto de 2,4s garante que
+  // ninguem fique preso esperando uma tag que nunca vem.
+  if (valido) {
+    ir.href = alvo;
+    setTimeout(vai, 1500);
+    setTimeout(function(){ giro.style.display='none'; manual.style.display='block'; }, 3000);
+  } else {
+    giro.style.display='none';
+    msg.innerHTML = 'Nao conseguimos montar o link. Fale com a Toque &amp; Retoque pelo telefone ' +
+      '<a href="tel:+5551996668832">(51) 99666-8832</a>.';
+    manual.style.display='block';
+    ir.textContent = 'Voltar ao site'; ir.href = 'index.html';
+  }
+})();
+</script>
+</body>
+</html>
