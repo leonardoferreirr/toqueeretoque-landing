@@ -200,8 +200,14 @@ body.travado{overflow:hidden}
   width:clamp(40px,7vw,120px);pointer-events:none}
 .vitrine::before{left:0;background:linear-gradient(90deg,var(--azul-esc),rgba(14,28,79,0))}
 .vitrine::after{right:0;background:linear-gradient(270deg,var(--azul-esc),rgba(14,28,79,0))}
-.vitrine__t{display:flex;list-style:none;width:max-content;gap:clamp(.65rem,1.3vw,1rem);
-  animation:corre 44s linear infinite}
+.vitrine__t{--vgap:clamp(.65rem,1.3vw,1rem);display:flex;list-style:none;width:max-content;gap:var(--vgap);
+  animation:corre 44s linear infinite;will-change:transform}
+/* A trilha tem os 5 itens mais os 5 duplicados. Metade da largura ainda
+   carrega meio gap a mais, entao o deslocamento tira esse meio gap: sem isso
+   a volta ao inicio pula. */
+@keyframes corre{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(calc(-50% - var(--vgap) / 2),0,0)}}
 .vitrine__t li{flex:none;height:clamp(200px,25vw,330px);border-radius:var(--r);
   overflow:hidden;background:var(--azul)}
 .vitrine__t img{width:auto;height:100%;object-fit:cover;display:block}
