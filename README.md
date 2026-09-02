@@ -1,7 +1,7 @@
 # Toque & Retoque — landing
 
 Landing de conversão para a **Toque & Retoque Acabamentos**, loja de acabamentos
-com mais de 25 anos e três lojas no Rio Grande do Sul (Taquara, Gramado e Novo
+há 29 anos, com três lojas no Rio Grande do Sul (Taquara, Gramado e Novo
 Hamburgo). Construída a partir do Raio-X de campanha preenchido pela Juliane
 Nunes, para receber o tráfego pago.
 
@@ -31,9 +31,9 @@ O Raio-X responde perguntas que a landing precisa refletir, e nem todas são
 - **Porcelanato é a prioridade número 1** das campanhas (ticket médio R$5 mil,
   boa disponibilidade nas três cidades). Por isso ele tem seção própria e
   aparece primeiro no menu.
-- **A vantagem mais afiada é pronta-entrega.** No mercado de acabamento o medo
-  real é a obra parar esperando material, e o cliente tem estoque próprio. Daí
-  a headline "Escolheu hoje, sai hoje".
+- **Pronta entrega é vantagem, mas com ressalva.** Não há estoque em todas as
+  lojas: a distribuição sai da central em Taquara. A comunicação correta é "boa
+  parte do mix a pronta entrega", nunca "estoque na loja".
 - **O FAQ não foi inventado.** As seis perguntas são exatamente as que o
   briefing lista como mais comuns no atendimento: preço, estoque, entrega na
   cidade, amostra, instalação e atendimento a arquiteto.
@@ -53,13 +53,12 @@ do cliente e ficar com o que ali tinha personalidade:
 - **A faixa de marcas em azul com logotipo branco.** É como o cliente já
   apresenta os parceiros, e os arquivos que eles têm são justamente a versão
   monocromática branca.
-- **A seção de equipes em círculo.** Era a parte mais humana do site antigo
-  ("Conheça nossa família"). Numa compra de ticket alto e presencial, saber quem
-  vai atender pesa. Mantida, com a moldura mais discreta.
+- **A seção de equipes em círculo** foi mantida por um tempo, mas saiu na revisão
+  do cliente: os times mudaram em todas as lojas. Virou o método de atendimento.
 
 ## Os logotipos das marcas
 
-Os dez vieram da biblioteca de mídia do próprio cliente. Nove já eram versão
+Vieram da biblioteca de mídia do próprio cliente. Nove já eram versão
 branca sobre transparente. **A Tramontina deu trabalho e vale o registro:** o
 arquivo dela é uma caixa azul sólida com o texto em *recorte*, não em tinta
 branca. Filtrar por "pixel branco" não acha nada, e filtrar por "pixel azul"
@@ -71,6 +70,36 @@ dentro dele.
 A **Decortiles** também precisou de tratamento: o logotipo empilha símbolo e
 palavra, então ao normalizar pela caixa a palavra encolhia e a marca aparecia
 menor que as vizinhas. Ficou só a palavra.
+
+## Revisão do cliente (2026-09-02)
+
+O cliente devolveu 10 páginas de revisão. O eixo: **o público é alto padrão**, e a
+copy precisa comunicar isso. Palavras dele: os textos estavam "grosseiros" e não
+refletiam o posicionamento de loja especializada com atendimento consultivo.
+
+Correções factuais que ele apontou, e que eu tinha errado:
+
+- **São 29 anos, não 25.** Em abril de 2027 completam 30.
+- **Não há estoque em todas as lojas.** A distribuição sai da central em Taquara.
+  Quem compra em Novo Hamburgo não retira na hora. O correto é comunicar um mix
+  com boa parte a pronta entrega, nunca "estoque na loja".
+- **A foto que eu rotulei como equipe de Novo Hamburgo era da equipe de Palhoça.**
+- **O WhatsApp é o da loja**, não o do Raio-X.
+
+Mudanças de direção:
+
+- **Layout claro.** O hero escuro saiu: o material do próprio cliente é branco com
+  azul e laranja entrando como forma geométrica no canto, e é isso que o hero
+  reproduz agora.
+- **Headline de realização**, no lugar de "Escolheu hoje, sai hoje".
+- **Porcelanato e piso vinílico ganharam espaço próprio e lado a lado**, como no
+  Fino Acabamento, porque a dúvida real do cliente costuma ser entre um e outro.
+- **A seção de equipes virou o método de atendimento em quatro etapas.** Os times
+  mudaram em todas as lojas e o cliente pediu sugestão, com copy voltada ao
+  atendimento consultivo. Mostrar o percurso comunica isso melhor que foto posada
+  e não depende de material que ainda não existe. Quando as fotos de atendimento
+  chegarem, cada etapa comporta uma imagem.
+- **Docol saiu da faixa de marcas**, a pedido.
 
 ## Identidade
 
@@ -126,41 +155,10 @@ layout que o cliente pediu, e segue acima do gate de 95.
 
 CLS zero. Duas rodadas por formato, para descartar cold start.
 
-Verificado em Chromium e WebKit, em desktop, tablet e mobile: 10 seções, 5
-curvas com altura consistente, 10 logotipos, 4 equipes, 12 CTAs todos com o
-mesmo texto, galeria em largura única, nenhuma foto quebrada, sem overflow
-horizontal, zero erro de JS. Os caminhos de CTA testados ponta a ponta, cada um
-chegando ao WhatsApp com a sua frase.
-
-## Revisão do cliente (2026-09-02)
-
-O cliente devolveu 10 páginas de revisão. O eixo: **o público é alto padrão**, e a
-copy precisa comunicar isso. Palavras dele: os textos estavam "grosseiros" e não
-refletiam o posicionamento de loja especializada com atendimento consultivo.
-
-Correções factuais que ele apontou, e que eu tinha errado:
-
-- **São 29 anos, não 25.** Em abril de 2027 completam 30.
-- **Não há estoque em todas as lojas.** A distribuição sai da central em Taquara.
-  Quem compra em Novo Hamburgo não retira na hora. O correto é comunicar um mix
-  com boa parte a pronta entrega, nunca "estoque na loja".
-- **A foto que eu rotulei como equipe de Novo Hamburgo era da equipe de Palhoça.**
-- **O WhatsApp é o da loja**, não o do Raio-X.
-
-Mudanças de direção:
-
-- **Layout claro.** O hero escuro saiu: o material do próprio cliente é branco com
-  azul e laranja entrando como forma geométrica no canto, e é isso que o hero
-  reproduz agora.
-- **Headline de realização**, no lugar de "Escolheu hoje, sai hoje".
-- **Porcelanato e piso vinílico ganharam espaço próprio e lado a lado**, como no
-  Fino Acabamento, porque a dúvida real do cliente costuma ser entre um e outro.
-- **A seção de equipes virou o método de atendimento em quatro etapas.** Os times
-  mudaram em todas as lojas e o cliente pediu sugestão, com copy voltada ao
-  atendimento consultivo. Mostrar o percurso comunica isso melhor que foto posada
-  e não depende de material que ainda não existe. Quando as fotos de atendimento
-  chegarem, cada etapa comporta uma imagem.
-- **Docol saiu da faixa de marcas**, a pedido.
+Verificado em Chromium e WebKit, em desktop, tablet e mobile: 10 seções, 9
+logotipos, 2 cards de piso, 4 etapas de atendimento, 12 CTAs todos com o mesmo
+texto, galeria em largura única, nenhuma foto quebrada, sem overflow horizontal,
+zero erro de JS.
 
 ## A confirmar com o cliente
 
