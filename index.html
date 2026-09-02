@@ -6,11 +6,13 @@
 
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
-<style>@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-latin.woff2') format('woff2');font-weight:400 700;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-latin-ext.woff2') format('woff2');font-weight:400 700;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin.woff2') format('woff2');font-weight:300 700;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin-ext.woff2') format('woff2');font-weight:300 700;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}:root{--azul:#183084;--azul-esc:#0E1C4F;--azul-2:#22409E;--azul-3:#4763C4;--laranja:#F05418;--laranja-2:#FF7038;--laranja-esc:#C43F0C;--papel:#FCFBFA;--papel-2:#F4F2EF;--papel-3:#E9E5E0;--tinta:#14161C;--tinta-2:#4D5460;--tinta-3:#767D8A;--linha:#E3DFD9;--wa:#0B7A3B;--wa-h:#096330;--display:'Archivo','Helvetica Neue',Arial,sans-serif;--body:'Manrope','Helvetica Neue',Arial,sans-serif;--ease:cubic-bezier(.22,.61,.36,1);--gut:clamp(1.25rem,5vw,5rem);--maxw:1260px;--r:6px}*{margin:0;padding:0;box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}body{background:var(--papel);color:var(--tinta);font-family:var(--body);font-weight:400;font-size:clamp(1rem,.26vw + .94rem,1.06rem);line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:clip}img,svg,video{display:block;max-width:100%}img{height:auto}a{color:inherit;text-decoration:none}::selection{background:var(--azul);color:#fff}:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:2px}.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}.sec{padding-block:clamp(4.2rem,8.5vw,7.5rem)}.sec--curta{padding-block:clamp(3.2rem,5.5vw,5rem)}.h1,.h2,.h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.04}.h1{font-size:clamp(2.5rem,6.6vw,5rem)}.h2{font-size:clamp(2rem,4.4vw,3.3rem);line-height:1.06}.h3{font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1.16;letter-spacing:-.015em}.lar{color:var(--laranja)}.lead{font-size:clamp(1.04rem,.5vw + .93rem,1.18rem);color:var(--tinta-2);line-height:1.66;max-width:56ch}.cab{display:grid;gap:1.1rem;max-width:48ch}.cab--centro{justify-items:center;text-align:center;margin-inline:auto;max-width:62ch}.corpo{color:var(--tinta-2)}.corpo p + p{margin-top:1rem}.esc{color:#fff}.esc .h2,.esc .h3{color:#fff}.esc .lead,.esc .corpo{color:rgba(255,255,255,.8)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;padding:.95rem 1.85rem;border:1.5px solid transparent;border-radius:var(--r);font-family:var(--body);font-size:.96rem;font-weight:600;letter-spacing:.005em;cursor:pointer;transition:background .28s var(--ease),border-color .28s var(--ease),color .28s var(--ease),transform .28s var(--ease)}.btn:active{transform:translateY(1px)}.btn svg{width:19px;height:19px;flex:none}.btn--wa{background:var(--wa);border-color:var(--wa);color:#fff}.btn--wa:hover{background:var(--wa-h);border-color:var(--wa-h)}.btn--linha{background:transparent;color:var(--azul);border-color:rgba(24,48,132,.28)}.btn--linha:hover{background:rgba(24,48,132,.06);border-color:var(--azul)}.btn--clara{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}.btn--clara:hover{background:rgba(255,255,255,.12);border-color:#fff}.acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}.acoes--centro{justify-content:center}.nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .35s var(--ease),box-shadow .35s var(--ease)}.nav__in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:78px;position:relative;z-index:1}.nav::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(rgba(10,20,52,.58),rgba(10,20,52,.18) 62%,rgba(10,20,52,0));transition:opacity .35s var(--ease)}.nav[data-fixa]::before{opacity:0}.nav[data-fixa]{background:rgba(252,251,250,.95);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linha)}.marca img{width:clamp(132px,15vw,168px);height:auto}.nav:not([data-fixa]) .marca img{filter:brightness(0) invert(1)}.nav__links{display:flex;gap:2rem;list-style:none;font-size:.92rem;font-weight:500}.nav__links a{color:rgba(255,255,255,.9);position:relative;padding-block:.3rem;transition:color .3s var(--ease)}.nav[data-fixa] .nav__links a{color:var(--tinta-2)}.nav__links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--laranja);transition:right .32s var(--ease)}.nav__links a:hover::after{right:0}.nav[data-fixa] .nav__links a:hover{color:var(--azul)}.burger{display:none;width:44px;height:44px;padding:11px 6px;margin-right:-6px;background:none;border:0;cursor:pointer;position:relative}.burger span{position:absolute;left:6px;width:32px;height:2px;background:#fff;border-radius:2px;transition:.34s var(--ease)}.nav[data-fixa] .burger span{background:var(--azul)}.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:29px}.gaveta{position:fixed;inset:0;z-index:55;background:var(--azul);display:grid;align-content:center;gap:.2rem;padding:6rem var(--gut) 3rem;visibility:hidden;opacity:0;transition:opacity .35s var(--ease),visibility .35s}.gaveta[data-aberta]{visibility:visible;opacity:1}.gaveta a{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(1.9rem,7vw,2.6rem);padding-block:.42rem;color:#fff}.gaveta .btn{font-family:var(--body);font-size:.95rem;margin-top:1.6rem;justify-self:start}body.travado{overflow:hidden}.hero{position:relative;min-height:100svh;display:grid;align-items:center;background:var(--azul-esc);overflow:hidden;isolation:isolate}.hero__foto{position:absolute;inset:0;z-index:0}.hero__foto img{width:100%;height:100%;object-fit:cover}.hero__veu{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(100deg,rgba(10,20,52,.95) 0%,rgba(10,20,52,.88) 34%,rgba(10,20,52,.58) 60%,rgba(10,20,52,.3) 100%),linear-gradient(rgba(10,20,52,.5),rgba(10,20,52,0) 34%,rgba(10,20,52,.42))}.hero__in{position:relative;z-index:2;padding-block:clamp(7rem,14vh,9.5rem) clamp(4rem,8vh,6rem)}.hero .h1{color:#fff;max-width:14ch}.hero .h1 em{font-style:normal;color:var(--laranja-2)}.hero__sub{color:rgba(255,255,255,.86);font-size:clamp(1.04rem,.5vw + .93rem,1.2rem);max-width:50ch;margin-top:1.5rem;line-height:1.66}.hero__n{display:flex;flex-wrap:wrap;gap:clamp(1.6rem,4vw,3.4rem);margin-top:clamp(2.4rem,4.5vw,3.4rem);padding-top:clamp(1.6rem,3vw,2.2rem);border-top:1px solid rgba(255,255,255,.2)}.hero__n div{display:grid;gap:.15rem}.hero__n b{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1;color:var(--laranja-2);letter-spacing:-.03em}.hero__n span{font-size:.86rem;color:rgba(255,255,255,.74);letter-spacing:.01em}.onda{position:relative;line-height:0;overflow:hidden}.onda svg{display:block;width:100%;height:clamp(38px,5vw,80px)}.onda--sobe svg{transform:rotate(180deg)}.marcas{background:var(--azul);color:#fff}.marcas__g{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1.4rem,3vw,2.8rem);align-items:center;margin-top:clamp(2rem,3.4vw,2.8rem)}.marcas__g img{width:100%;max-width:150px;height:auto;margin-inline:auto;opacity:.9;transition:opacity .3s var(--ease),transform .3s var(--ease)}.marcas__g a:hover img,.marcas__g li:hover img{opacity:1;transform:translateY(-2px)}.marcas__g li{list-style:none;display:grid;place-items:center}.equipes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:clamp(2.4rem,4vw,3.4rem)}.equipe{display:grid;gap:.9rem;justify-items:center;text-align:center}.equipe__f{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--papel-3);box-shadow:0 0 0 3px var(--papel),0 0 0 5px var(--laranja);transition:box-shadow .35s var(--ease)}.equipe:hover .equipe__f{box-shadow:0 0 0 3px var(--papel),0 0 0 5px var(--azul)}.equipe__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}.equipe:hover .equipe__f img{transform:scale(1.05)}.equipe b{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.015em}.equipe span{font-size:.86rem;color:var(--tinta-3);display:block;margin-top:.1rem}.dif{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.8rem,3.6vw,3.2rem)}.dif__i{display:grid;gap:.7rem;align-content:start;padding-top:1.5rem;border-top:2px solid var(--laranja)}.dif__i p{font-size:.97rem;color:var(--tinta-2);line-height:1.62}.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.2rem,5vw,4.6rem);align-items:center}.foto-l{position:relative;border-radius:var(--r);overflow:hidden;background:var(--papel-3)}.foto-l img{width:100%;display:block}.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.65rem,1.3vw,1rem)}.gal figure{position:relative;overflow:hidden;border-radius:var(--r);background:var(--papel-3);aspect-ratio:1}.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.gal figure:hover img{transform:scale(1.045)}.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1rem;color:#fff;font-size:.85rem;font-weight:500;background:linear-gradient(0deg,rgba(10,20,52,.88),rgba(10,20,52,0))}.vitrine{overflow:hidden;margin-top:clamp(2.2rem,3.6vw,3.2rem);position:relative}.vitrine::before,.vitrine::after{content:'';position:absolute;top:0;bottom:0;z-index:2;width:clamp(40px,7vw,120px);pointer-events:none}.vitrine::before{left:0;background:linear-gradient(90deg,var(--azul-esc),rgba(14,28,79,0))}.vitrine::after{right:0;background:linear-gradient(270deg,var(--azul-esc),rgba(14,28,79,0))}.vitrine__t{display:flex;list-style:none;width:max-content;gap:clamp(.65rem,1.3vw,1rem);animation:corre 44s linear infinite}.vitrine__t li{flex:none;height:clamp(200px,25vw,330px);border-radius:var(--r);overflow:hidden;background:var(--azul)}.vitrine__t img{width:auto;height:100%;object-fit:cover;display:block}.vitrine:hover .vitrine__t{animation-play-state:paused}.lojas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,2.4vw,2rem)}.loja{display:grid;gap:0;border:1px solid var(--linha);border-radius:var(--r);overflow:hidden;background:var(--papel)}.loja__f{aspect-ratio:4/3;overflow:hidden;background:var(--papel-3)}.loja__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.loja:hover .loja__f img{transform:scale(1.04)}.loja__c{padding:clamp(1.2rem,2.2vw,1.7rem);display:grid;gap:.5rem;align-content:start}.loja__c h3{font-size:1.3rem}.loja__e{font-size:.93rem;color:var(--tinta-2);line-height:1.55}.loja__b{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}.loja__b .btn{min-height:46px;padding:.6rem 1.1rem;font-size:.88rem;flex:1 1 auto}.faq{display:grid;border-top:1px solid var(--linha);max-width:80ch;margin-inline:auto}.faq details{border-bottom:1px solid var(--linha)}.faq summary{cursor:pointer;list-style:none;padding:1.35rem 2.6rem 1.35rem 0;position:relative;font-size:1.04rem;font-weight:600;transition:color .3s var(--ease)}.faq summary::-webkit-details-marker{display:none}.faq summary:hover{color:var(--azul)}.faq summary::after{content:'';position:absolute;right:.4rem;top:50%;width:11px;height:11px;border-right:2px solid var(--laranja);border-bottom:2px solid var(--laranja);transform:translateY(-70%) rotate(45deg);transition:transform .34s var(--ease)}.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}.faq p{padding-bottom:1.5rem;color:var(--tinta-2);max-width:70ch}.contato{background:var(--azul-esc)}.contato__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(2.4rem,5vw,4.5rem);align-items:start}.dados{display:grid;gap:1.4rem;margin-top:2.2rem}.dados a,.dados div{display:flex;gap:.85rem;align-items:flex-start}.dados svg{width:19px;height:19px;flex:none;margin-top:.28rem;color:var(--laranja-2)}.dados b{display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600;margin-bottom:.12rem}.dados span{font-size:1rem;color:#fff}.dados a:hover span{color:var(--laranja-2)}.form{background:var(--papel);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.1rem);display:grid;gap:.95rem}.campo{display:grid;gap:.35rem}.campo label{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-3);font-weight:600}.campo input,.campo select,.campo textarea{font-family:var(--body);font-size:1rem;color:var(--tinta);background:var(--papel-2);border:1.5px solid var(--linha);border-radius:var(--r);padding:.8rem 1rem;min-height:50px;width:100%}.campo textarea{min-height:92px;resize:vertical}.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--azul);background:#fff}.mapa{border:0;width:100%;aspect-ratio:16/9;border-radius:var(--r);background:var(--papel-3);filter:grayscale(.45) contrast(1.04);transition:filter .5s var(--ease)}.mapa:hover{filter:none}.rodape{background:var(--azul);color:rgba(255,255,255,.72);padding-block:clamp(3.2rem,6vw,4.5rem) 2rem}.rodape__t{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.8fr));gap:clamp(2rem,4vw,3.5rem);align-items:start}.rodape .marca img{filter:brightness(0) invert(1);margin-bottom:1.2rem}.rodape__k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#FFA377;font-weight:600;margin-bottom:.9rem}.rodape ul{list-style:none;display:grid;gap:.05rem}.rodape li a,.rodape li span{display:inline-flex;align-items:center;gap:.5rem;padding-block:.4rem;font-size:.93rem;transition:color .3s var(--ease)}.rodape a:hover{color:#fff}.rodape__b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:clamp(2.2rem,4.5vw,3.2rem);padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.18);font-size:.82rem;color:rgba(255,255,255,.62)}.wa-flut{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:50;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 26px rgba(11,122,59,.36);transition:transform .3s var(--ease),background .3s var(--ease)}.wa-flut:hover{background:var(--wa-h);transform:translateY(-2px)}.wa-flut svg{width:29px;height:29px}[data-sobe]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}[data-sobe].dentro{opacity:1;transform:none}[data-sobe][data-atraso="1"]{transition-delay:.08s}[data-sobe][data-atraso="2"]{transition-delay:.16s}[data-sobe][data-atraso="3"]{transition-delay:.24s}@media (max-width:1000px){.nav__links{display:none}.burger{display:block}.dif{grid-template-columns:1fr;gap:1.7rem}.duo,.contato__g{grid-template-columns:1fr;gap:2.2rem}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.lojas{grid-template-columns:1fr;gap:1.4rem}.loja{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.loja__f{aspect-ratio:1}.marcas__g{grid-template-columns:repeat(3,minmax(0,1fr))}.equipes{grid-template-columns:repeat(2,minmax(0,1fr))}.rodape__t{grid-template-columns:1fr 1fr}.rodape__m{grid-column:1/-1}}@media (max-width:620px){.hero .h1{font-size:clamp(2.1rem,9vw,2.9rem)}.hero .acoes{flex-direction:column;align-items:stretch;width:100%;max-width:23rem}.hero .acoes .btn{width:100%}.hero__veu{background:linear-gradient(rgba(10,20,52,.72),rgba(10,20,52,.86) 45%,rgba(10,20,52,.94))}.hero__n{gap:1.3rem 2rem}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.loja{grid-template-columns:1fr}.loja__f{aspect-ratio:16/10}.marcas__g{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 1.2rem}.corpo,.faq p,.dif__i p{font-size:.95rem}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}[data-sobe]{opacity:1;transform:none}.vitrine__t{animation:none}}</style>
+<link rel="preload" as="image" href="assets/img/hero-640.webp"
+      imagesrcset="assets/img/hero-420.webp 420w, assets/img/hero-640.webp 640w, assets/img/hero-860.webp 860w"
+      imagesizes="(max-width:1000px) 92vw, 40vw" fetchpriority="high">
+<style>@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-latin.woff2') format('woff2');font-weight:400 700;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-latin-ext.woff2') format('woff2');font-weight:400 700;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin.woff2') format('woff2');font-weight:300 700;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin-ext.woff2') format('woff2');font-weight:300 700;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}:root{--azul:#183084;--azul-esc:#0E1C4F;--azul-2:#22409E;--azul-3:#4763C4;--laranja:#F05418;--laranja-2:#FF7038;--laranja-esc:#C43F0C;--papel:#FCFBFA;--papel-2:#F4F2EF;--papel-3:#E9E5E0;--tinta:#14161C;--tinta-2:#4D5460;--tinta-3:#767D8A;--linha:#E3DFD9;--wa:#0B7A3B;--wa-h:#096330;--display:'Archivo','Helvetica Neue',Arial,sans-serif;--body:'Manrope','Helvetica Neue',Arial,sans-serif;--ease:cubic-bezier(.22,.61,.36,1);--gut:clamp(1.25rem,5vw,5rem);--maxw:1260px;--r:6px}*{margin:0;padding:0;box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}body{background:var(--papel);color:var(--tinta);font-family:var(--body);font-weight:400;font-size:clamp(1rem,.26vw + .94rem,1.06rem);line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:clip}img,svg,video{display:block;max-width:100%}img{height:auto}a{color:inherit;text-decoration:none}::selection{background:var(--azul);color:#fff}:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:2px}.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}.sec{padding-block:clamp(4.2rem,8.5vw,7.5rem)}.sec--curta{padding-block:clamp(3.2rem,5.5vw,5rem)}.h1,.h2,.h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.04}.h1{font-size:clamp(2.5rem,6.6vw,5rem)}.h2{font-size:clamp(2rem,4.4vw,3.3rem);line-height:1.06}.h3{font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1.16;letter-spacing:-.015em}.lar{color:var(--laranja)}.lead{font-size:clamp(1.04rem,.5vw + .93rem,1.18rem);color:var(--tinta-2);line-height:1.66;max-width:56ch}.cab{display:grid;gap:1.1rem;max-width:48ch}.cab--centro{justify-items:center;text-align:center;margin-inline:auto;max-width:62ch}.corpo{color:var(--tinta-2)}.corpo p + p{margin-top:1rem}.esc{color:#fff}.esc .h2,.esc .h3{color:#fff}.esc .lead,.esc .corpo{color:rgba(255,255,255,.8)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;padding:.95rem 1.85rem;border:1.5px solid transparent;border-radius:var(--r);font-family:var(--body);font-size:.96rem;font-weight:600;letter-spacing:.005em;cursor:pointer;transition:background .28s var(--ease),border-color .28s var(--ease),color .28s var(--ease),transform .28s var(--ease)}.btn:active{transform:translateY(1px)}.btn svg{width:19px;height:19px;flex:none}.btn--wa{background:var(--wa);border-color:var(--wa);color:#fff}.btn--wa:hover{background:var(--wa-h);border-color:var(--wa-h)}.btn--linha{background:transparent;color:var(--azul);border-color:rgba(24,48,132,.28)}.btn--linha:hover{background:rgba(24,48,132,.06);border-color:var(--azul)}.btn--clara{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}.btn--clara:hover{background:rgba(255,255,255,.12);border-color:#fff}.acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}.acoes--centro{justify-content:center}.nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .35s var(--ease),box-shadow .35s var(--ease)}.nav__in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:78px;position:relative;z-index:1}.nav{background:rgba(252,251,250,.9);backdrop-filter:blur(12px)}.nav[data-fixa]{background:rgba(252,251,250,.96);box-shadow:0 1px 0 var(--linha)}.marca img{width:clamp(132px,15vw,168px);height:auto}.nav__links{display:flex;gap:2rem;list-style:none;font-size:.92rem;font-weight:500}.nav__links a{color:var(--tinta-2);position:relative;padding-block:.3rem;transition:color .3s var(--ease)}.nav__links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--laranja);transition:right .32s var(--ease)}.nav__links a:hover::after{right:0}.nav__links a:hover{color:var(--azul)}.burger{display:none;width:44px;height:44px;padding:11px 6px;margin-right:-6px;background:none;border:0;cursor:pointer;position:relative}.burger span{position:absolute;left:6px;width:32px;height:2px;background:var(--azul);border-radius:2px;transition:.34s var(--ease)}.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:29px}.gaveta{position:fixed;inset:0;z-index:55;background:var(--azul);display:grid;align-content:center;gap:.2rem;padding:6rem var(--gut) 3rem;visibility:hidden;opacity:0;transition:opacity .35s var(--ease),visibility .35s}.gaveta[data-aberta]{visibility:visible;opacity:1}.gaveta a{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(1.9rem,7vw,2.6rem);padding-block:.42rem;color:#fff}.gaveta .btn{font-family:var(--body);font-size:.95rem;margin-top:1.6rem;justify-self:start}body.travado{overflow:hidden}.hero{position:relative;background:var(--papel);overflow:hidden;isolation:isolate;padding-block:clamp(7.5rem,15vh,10rem) clamp(3.5rem,7vw,6rem)}.hero__forma{position:absolute;z-index:0;pointer-events:none;border-radius:50%}.hero__forma--azul{background:var(--azul);width:clamp(220px,26vw,420px);aspect-ratio:1;top:clamp(-190px,-13vw,-90px);left:clamp(-150px,-9vw,-70px);opacity:.07}.hero__forma--laranja{background:var(--laranja);width:clamp(260px,30vw,480px);aspect-ratio:1;bottom:clamp(-230px,-15vw,-110px);right:clamp(-170px,-10vw,-80px);opacity:.09}.hero__g{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(2.4rem,4.5vw,4rem);align-items:center}.hero .h1{color:var(--tinta);max-width:19ch;font-size:clamp(2.4rem,4.6vw,4.1rem)}.hero .h1 em{font-style:normal;color:var(--laranja)}.hero__sub{color:var(--tinta-2);font-size:clamp(1.05rem,.5vw + .94rem,1.22rem);max-width:50ch;margin-top:1.4rem;line-height:1.66}.hero__n{display:flex;flex-wrap:wrap;gap:clamp(1.4rem,3.4vw,3rem);margin-top:clamp(2.2rem,4vw,3rem);padding-top:clamp(1.5rem,2.6vw,2rem);border-top:1px solid var(--linha)}.hero__n div{display:grid;gap:.15rem}.hero__n b{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1;color:var(--azul);letter-spacing:-.03em}.hero__n span{font-size:.85rem;color:var(--tinta-2)}.hero__foto{position:relative;border-radius:var(--r);overflow:hidden;background:var(--papel-3)}.hero__foto img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}.hero__cx{position:relative}.hero__cx::before{content:'';position:absolute;inset:auto -14px -14px auto;width:62%;height:58%;border:2px solid var(--laranja);border-radius:var(--r);z-index:0}.onda{position:relative;line-height:0;overflow:hidden}.onda svg{display:block;width:100%;height:clamp(38px,5vw,80px)}.onda--sobe svg{transform:rotate(180deg)}.marcas{background:var(--azul);color:#fff}.marcas__g{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1.4rem,3vw,2.8rem);align-items:center;margin-top:clamp(2rem,3.4vw,2.8rem)}.marcas__g img{width:100%;max-width:150px;height:auto;margin-inline:auto;opacity:.9;transition:opacity .3s var(--ease),transform .3s var(--ease)}.marcas__g a:hover img,.marcas__g li:hover img{opacity:1;transform:translateY(-2px)}.marcas__g li{list-style:none;display:grid;place-items:center}.dif{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.8rem,3.6vw,3.2rem)}.dif__i{display:grid;gap:.7rem;align-content:start;padding-top:1.5rem;border-top:2px solid var(--laranja)}.dif__i p{font-size:.97rem;color:var(--tinta-2);line-height:1.62}.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.2rem,5vw,4.6rem);align-items:center}.foto-l{position:relative;border-radius:var(--r);overflow:hidden;background:var(--papel-3)}.foto-l img{width:100%;display:block}.etapas{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.4rem,3vw,2.6rem);margin-top:clamp(2.4rem,4vw,3.4rem);counter-reset:e}.etapa{display:grid;gap:.6rem;align-content:start;padding-top:1.4rem;border-top:2px solid var(--linha);transition:border-color .35s var(--ease)}.etapa:hover{border-top-color:var(--laranja)}.etapa__n{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--laranja);letter-spacing:.02em}.etapa p{font-size:.95rem;color:var(--tinta-2);line-height:1.62}.pisos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:clamp(2.4rem,4vw,3.4rem)}.piso{background:var(--papel);border:1px solid var(--linha);border-radius:var(--r);overflow:hidden}.piso__f{aspect-ratio:16/10;overflow:hidden;background:var(--papel-3)}.piso__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.piso:hover .piso__f img{transform:scale(1.04)}.piso__c{padding:clamp(1.4rem,2.6vw,2rem);display:grid;gap:.85rem}.piso__c p{color:var(--tinta-2);font-size:.97rem;line-height:1.62}.piso__l{list-style:none;display:grid;gap:.5rem;margin-top:.2rem}.piso__l li{display:flex;gap:.65rem;font-size:.92rem;color:var(--tinta-2);line-height:1.5}.piso__l li::before{content:'';width:7px;height:7px;margin-top:.5rem;flex:none;background:var(--laranja);border-radius:2px}.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.65rem,1.3vw,1rem)}.gal figure{position:relative;overflow:hidden;border-radius:var(--r);background:var(--papel-3);aspect-ratio:1}.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.gal figure:hover img{transform:scale(1.045)}.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1rem;color:#fff;font-size:.85rem;font-weight:500;background:linear-gradient(0deg,rgba(10,20,52,.88),rgba(10,20,52,0))}.vitrine{overflow:hidden;margin-top:clamp(2.2rem,3.6vw,3.2rem);position:relative}.vitrine::before,.vitrine::after{content:'';position:absolute;top:0;bottom:0;z-index:2;width:clamp(40px,7vw,120px);pointer-events:none}.vitrine::before{left:0;background:linear-gradient(90deg,var(--azul-esc),rgba(14,28,79,0))}.vitrine::after{right:0;background:linear-gradient(270deg,var(--azul-esc),rgba(14,28,79,0))}.vitrine__t{display:flex;list-style:none;width:max-content;gap:clamp(.65rem,1.3vw,1rem);animation:corre 44s linear infinite}.vitrine__t li{flex:none;height:clamp(200px,25vw,330px);border-radius:var(--r);overflow:hidden;background:var(--azul)}.vitrine__t img{width:auto;height:100%;object-fit:cover;display:block}.vitrine:hover .vitrine__t{animation-play-state:paused}.lojas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,2.4vw,2rem)}.loja{display:grid;gap:0;border:1px solid var(--linha);border-radius:var(--r);overflow:hidden;background:var(--papel)}.loja__f{aspect-ratio:4/3;overflow:hidden;background:var(--papel-3)}.loja__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.loja:hover .loja__f img{transform:scale(1.04)}.loja__c{padding:clamp(1.2rem,2.2vw,1.7rem);display:grid;gap:.5rem;align-content:start}.loja__c h3{font-size:1.3rem}.loja__e{font-size:.93rem;color:var(--tinta-2);line-height:1.55}.loja__b{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}.loja__b .btn{min-height:46px;padding:.6rem 1.1rem;font-size:.88rem;flex:1 1 auto}.faq{display:grid;border-top:1px solid var(--linha);max-width:80ch;margin-inline:auto}.faq details{border-bottom:1px solid var(--linha)}.faq summary{cursor:pointer;list-style:none;padding:1.35rem 2.6rem 1.35rem 0;position:relative;font-size:1.04rem;font-weight:600;transition:color .3s var(--ease)}.faq summary::-webkit-details-marker{display:none}.faq summary:hover{color:var(--azul)}.faq summary::after{content:'';position:absolute;right:.4rem;top:50%;width:11px;height:11px;border-right:2px solid var(--laranja);border-bottom:2px solid var(--laranja);transform:translateY(-70%) rotate(45deg);transition:transform .34s var(--ease)}.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}.faq p{padding-bottom:1.5rem;color:var(--tinta-2);max-width:70ch}.contato{background:var(--azul-esc)}.contato__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(2.4rem,5vw,4.5rem);align-items:start}.dados{display:grid;gap:1.4rem;margin-top:2.2rem}.dados a,.dados div{display:flex;gap:.85rem;align-items:flex-start}.dados svg{width:19px;height:19px;flex:none;margin-top:.28rem;color:var(--laranja-2)}.dados b{display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600;margin-bottom:.12rem}.dados span{font-size:1rem;color:#fff}.dados a:hover span{color:var(--laranja-2)}.form{background:var(--papel);border-radius:var(--r);padding:clamp(1.4rem,3vw,2.1rem);display:grid;gap:.95rem}.campo{display:grid;gap:.35rem}.campo label{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-3);font-weight:600}.campo input,.campo select,.campo textarea{font-family:var(--body);font-size:1rem;color:var(--tinta);background:var(--papel-2);border:1.5px solid var(--linha);border-radius:var(--r);padding:.8rem 1rem;min-height:50px;width:100%}.campo textarea{min-height:92px;resize:vertical}.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--azul);background:#fff}.mapa{border:0;width:100%;aspect-ratio:16/9;border-radius:var(--r);background:var(--papel-3);filter:grayscale(.45) contrast(1.04);transition:filter .5s var(--ease)}.mapa:hover{filter:none}.rodape{background:var(--azul);color:rgba(255,255,255,.72);padding-block:clamp(3.2rem,6vw,4.5rem) 2rem}.rodape__t{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.8fr));gap:clamp(2rem,4vw,3.5rem);align-items:start}.rodape .marca img{filter:brightness(0) invert(1);margin-bottom:1.2rem}.rodape__k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#FFA377;font-weight:600;margin-bottom:.9rem}.rodape ul{list-style:none;display:grid;gap:.05rem}.rodape li a,.rodape li span{display:inline-flex;align-items:center;gap:.5rem;padding-block:.4rem;font-size:.93rem;transition:color .3s var(--ease)}.rodape a:hover{color:#fff}.rodape__b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:clamp(2.2rem,4.5vw,3.2rem);padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.18);font-size:.82rem;color:rgba(255,255,255,.62)}.wa-flut{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:50;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 26px rgba(11,122,59,.36);transition:transform .3s var(--ease),background .3s var(--ease)}.wa-flut:hover{background:var(--wa-h);transform:translateY(-2px)}.wa-flut svg{width:29px;height:29px}[data-sobe]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}[data-sobe].dentro{opacity:1;transform:none}[data-sobe][data-atraso="1"]{transition-delay:.08s}[data-sobe][data-atraso="2"]{transition-delay:.16s}[data-sobe][data-atraso="3"]{transition-delay:.24s}@media (max-width:1000px){.nav__links{display:none}.burger{display:block}.dif{grid-template-columns:1fr;gap:1.7rem}.duo,.contato__g{grid-template-columns:1fr;gap:2.2rem}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.lojas{grid-template-columns:1fr;gap:1.4rem}.loja{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.loja__f{aspect-ratio:1}.marcas__g{grid-template-columns:repeat(3,minmax(0,1fr))}.etapas{grid-template-columns:repeat(2,minmax(0,1fr))}.pisos{grid-template-columns:1fr}.hero__g{grid-template-columns:1fr;gap:2.4rem}.hero__cx{order:-1}.rodape__t{grid-template-columns:1fr 1fr}.rodape__m{grid-column:1/-1}}@media (max-width:620px){.hero .h1{font-size:clamp(2.1rem,9vw,2.9rem)}.hero .acoes{flex-direction:column;align-items:stretch;width:100%;max-width:23rem}.hero .acoes .btn{width:100%}.hero__veu{background:linear-gradient(rgba(10,20,52,.72),rgba(10,20,52,.86) 45%,rgba(10,20,52,.94))}.hero__n{gap:1.3rem 2rem}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.loja{grid-template-columns:1fr}.loja__f{aspect-ratio:16/10}.marcas__g{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 1.2rem}.etapas{grid-template-columns:1fr;gap:1.6rem}.corpo,.faq p,.dif__i p{font-size:.95rem}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}[data-sobe]{opacity:1;transform:none}.vitrine__t{animation:none}}</style>
 
 <title>Toque &amp; Retoque | Porcelanatos e acabamentos com pronta-entrega em Taquara, Gramado e Novo Hamburgo</title>
-<meta name="description" content="Loja de acabamentos há mais de 25 anos no Rio Grande do Sul. Porcelanatos, laminados, louças e metais com estoque para pronta-entrega, showroom e entrega em Taquara, Gramado, Novo Hamburgo e região.">
+<meta name="description" content="Loja de acabamentos há mais de 29 anos no Rio Grande do Sul. Porcelanatos, laminados, louças e metais com estoque para pronta-entrega, showroom e entrega em Taquara, Gramado, Novo Hamburgo e região.">
 <link rel="canonical" href="https://toqueeretoque.com/">
 <meta name="theme-color" content="#183084">
 
@@ -29,7 +31,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness",
 "name":"Toque & Retoque Acabamentos",
-"description":"Loja de acabamentos com mais de 25 anos de mercado. Porcelanatos, laminados, louças e metais com estoque para pronta-entrega, showroom e entrega em Taquara, Gramado, Novo Hamburgo e região.",
+"description":"Loja de acabamentos com mais de 29 anos de mercado. Porcelanatos, laminados, louças e metais com estoque para pronta-entrega, showroom e entrega em Taquara, Gramado, Novo Hamburgo e região.",
 "url":"https://toqueeretoque.com/",
 "telephone":"+5551996668832",
 "image":"https://toqueeretoque.com/assets/img/hero.webp",
@@ -57,7 +59,7 @@
     </a>
     <nav aria-label="Principal">
       <ul class="nav__links">
-        <li><a href="#porcelanato">Porcelanatos</a></li>
+        <li><a href="#porcelanato">Porcelanatos e vinílicos</a></li>
         <li><a href="#ambientes">Ambientes</a></li>
         <li><a href="#lojas">Lojas</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -84,26 +86,35 @@
 
 <!-- hero ----------------------------------------------------------------- -->
 <section class="hero" id="topo">
-  <div class="hero__foto">
-    <img src="assets/img/hero.webp" width="1280" height="914" fetchpriority="high"
-         alt="Sala de estar com parede revestida em porcelanato marmorizado branco e dourado">
-  </div>
-  <div class="hero__veu"></div>
-  <div class="wrap hero__in">
-    <h1 class="h1">Escolheu hoje,<br><em>sai hoje</em>.</h1>
-    <p class="hero__sub">Porcelanatos, laminados, louças e metais com estoque em Taquara, Gramado
-      e Novo Hamburgo. Há mais de 25 anos evitando que obra pare esperando material chegar.</p>
-    <div class="acoes">
-      <a class="btn btn--wa" data-wa href="#">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-        Conversar com um especialista
-      </a>
-      <a class="btn btn--clara" href="#lojas">Ver as lojas</a>
+  <div class="hero__forma hero__forma--azul" aria-hidden="true"></div>
+  <div class="hero__forma hero__forma--laranja" aria-hidden="true"></div>
+  <div class="wrap hero__g">
+    <div>
+      <h1 class="h1">Do projeto ao lar<br>que você <em>imaginou</em>.</h1>
+      <p class="hero__sub">Há 29 anos reunimos as principais marcas de acabamento do mercado e
+        acompanhamos cada escolha, do primeiro revestimento ao último detalhe. Taquara, Gramado
+        e Novo Hamburgo.</p>
+      <div class="acoes">
+        <a class="btn btn--wa" data-wa href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Conversar com um especialista
+        </a>
+        <a class="btn btn--linha" href="#lojas">Conhecer os showrooms</a>
+      </div>
+      <div class="hero__n">
+        <div><b>29 anos</b><span>de mercado no Rio Grande do Sul</span></div>
+        <div><b>3 showrooms</b><span>Taquara, Gramado e Novo Hamburgo</span></div>
+        <div><b>Pronta entrega</b><span>em boa parte do nosso mix</span></div>
+      </div>
     </div>
-    <div class="hero__n">
-      <div><b>25 anos</b><span>de mercado no Rio Grande do Sul</span></div>
-      <div><b>3 lojas</b><span>Taquara, Gramado e Novo Hamburgo</span></div>
-      <div><b>Pronta-entrega</b><span>estoque na loja, não catálogo</span></div>
+    <div class="hero__cx" data-sobe data-atraso="1">
+      <div class="hero__foto">
+        <img src="assets/img/hero-640.webp"
+             srcset="assets/img/hero-420.webp 420w, assets/img/hero-640.webp 640w, assets/img/hero-860.webp 860w"
+             sizes="(max-width:1000px) 92vw, 40vw"
+             width="860" height="1075" fetchpriority="high"
+             alt="Sala de estar com parede revestida em porcelanato marmorizado branco e dourado">
+      </div>
     </div>
   </div>
 </section>
@@ -111,15 +122,16 @@
 <!-- marcas ----------------------------------------------------------------
      A curva costura o hero na faixa azul. No site antigo ela ocupava meia
      tela e era chapada de laranja; aqui e uma faixa fina que so emenda. -->
-<div class="onda" style="background:var(--azul-esc)" aria-hidden="true">
+<div class="onda" style="background:var(--papel)" aria-hidden="true">
   <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,0 C400,74 1040,74 1440,0 L1440,80 L0,80 Z" fill="#183084"/></svg>
 </div>
 <section class="sec sec--curta marcas esc">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">As marcas que<br>você já pediu pelo nome</h2>
-      <p class="lead" style="color:rgba(255,255,255,.8)">Trabalhamos com quem o mercado já conhece,
-        e mantemos estoque das linhas de maior saída de cada uma.</p>
+      <h2 class="h2">As principais marcas de<br>acabamento do mercado</h2>
+      <p class="lead" style="color:rgba(255,255,255,.8)">Reunimos em um só lugar as linhas que
+        arquitetos e clientes especificam, com a curadoria de quem trabalha com elas há quase
+        três décadas.</p>
     </div>
     <ul class="marcas__g" data-sobe>
       <li><img src="assets/img/marcas/portinari.webp" width="400" height="110" loading="lazy" decoding="async" alt="Portinari"></li>
@@ -128,10 +140,11 @@
       <li><img src="assets/img/marcas/incepa.webp" width="400" height="110" loading="lazy" decoding="async" alt="Incepa"></li>
       <li><img src="assets/img/marcas/decortiles.webp" width="400" height="110" loading="lazy" decoding="async" alt="Decortiles"></li>
       <li><img src="assets/img/marcas/tramontina.webp" width="400" height="110" loading="lazy" decoding="async" alt="Tramontina"></li>
-      <li><img src="assets/img/marcas/docol.webp" width="400" height="110" loading="lazy" decoding="async" alt="Docol"></li>
       <li><img src="assets/img/marcas/pasinato.webp" width="400" height="110" loading="lazy" decoding="async" alt="Pasinato"></li>
       <li><img src="assets/img/marcas/dune.webp" width="400" height="110" loading="lazy" decoding="async" alt="Dune"></li>
       <li><img src="assets/img/marcas/hanley.webp" width="400" height="110" loading="lazy" decoding="async" alt="Hanley"></li>
+      <!-- Deca, Quick-Step, Sabbia, Rubinettos e Lexxa entram aqui assim que o
+           cliente enviar os arquivos. Ver README. -->
     </ul>
   </div>
 </section>
@@ -144,19 +157,20 @@
   <div class="wrap">
     <div class="dif">
       <div class="dif__i" data-sobe>
-        <h2 class="h3">Estoque, não catálogo</h2>
-        <p>A peça está na loja. Você vê o lote inteiro, confere a tonalidade, mede a quantidade e
-          leva. Sem prazo de fábrica de 40 dias, sem descobrir no meio da obra que o modelo saiu de linha.</p>
+        <h2 class="h3">Um mix pensado para o seu projeto</h2>
+        <p>Você encontra as melhores marcas de acabamento reunidas em um só lugar, com boa parte
+          do mix disponível a pronta entrega, para o seu cronograma seguir sem espera.</p>
       </div>
       <div class="dif__i" data-sobe data-atraso="1">
-        <h2 class="h3">Curadoria do projeto inteiro</h2>
-        <p>Piso, parede, louça e metal precisam conversar entre si. Nossa equipe monta a combinação
-          com você, e trabalha com arquitetos e designers da região há mais de duas décadas.</p>
+        <h2 class="h3">Especialistas em acabamento</h2>
+        <p>Piso, parede, louça e metal precisam conversar entre si, e essa leitura é o que fazemos
+          todos os dias. Nossa equipe orienta a composição inteira, com o repertório de quem atende
+          arquitetos e designers da região desde 1997.</p>
       </div>
       <div class="dif__i" data-sobe data-atraso="2">
-        <h2 class="h3">Três lojas e entrega</h2>
-        <p>Taquara, Gramado e Novo Hamburgo, com entrega em toda a região. Você escolhe onde
-          ver de perto, e a gente resolve o transporte até a obra.</p>
+        <h2 class="h3">Do orçamento à entrega na obra</h2>
+        <p>A distribuição sai da nossa central em Taquara e atende toda a região. Você acompanha
+          o prazo desde o orçamento e recebe o material no endereço da obra, na data combinada.</p>
       </div>
     </div>
     <div class="acoes acoes--centro" style="margin-top:clamp(2.4rem,4vw,3.2rem)">
@@ -168,39 +182,63 @@
   </div>
 </section>
 
-<!-- porcelanato ----------------------------------------------------------- -->
+<!-- pisos: porcelanato e vinilico ------------------------------------------
+     Os dois carros-chefe das campanhas ganham espaco proprio e lado a lado,
+     porque a duvida real do cliente costuma ser justamente entre um e outro. -->
 <section class="sec" id="porcelanato" style="background:var(--papel-2)">
-  <div class="wrap duo">
-    <div class="cab" data-sobe>
-      <h2 class="h2">O porcelanato é o que<br>aparece primeiro</h2>
-      <div class="corpo">
-        <p>Antes do móvel, antes da luminária, o olho vai para o piso e para a parede. É a maior
-          superfície contínua do ambiente, e é ela que decide se o resultado parece caro ou não.</p>
-        <p>Por isso vale ver a peça grande, inteira e sob a luz certa, em vez de decidir por um
-          quadradinho de amostra ou por foto de catálogo. No showroom você vê o veio correndo pela
-          placa toda e compara os acabamentos lado a lado.</p>
-      </div>
-      <div class="acoes">
-        <a class="btn btn--wa" data-wa="Ola! Vim pelo site da Toque & Retoque e queria ver as opcoes de porcelanato." href="#">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-          Conversar com um especialista
-        </a>
-      </div>
+  <div class="wrap">
+    <div class="cab cab--centro" data-sobe>
+      <h2 class="h2">Porcelanatos e<br>pisos vinílicos</h2>
+      <p class="lead">São as duas escolhas que mais definem o resultado de um ambiente, e as que
+        mais geram dúvida na hora de decidir. Ajudamos você a chegar na certa.</p>
     </div>
-    <div class="foto-l" data-sobe data-atraso="1">
-      <img src="assets/img/destaque-quarto.webp" width="1200" height="800" loading="lazy" decoding="async"
-           alt="Suíte com banheira e parede em porcelanato marmorizado branco">
+    <div class="pisos" data-sobe>
+      <article class="piso">
+        <div class="piso__f"><img src="assets/img/destaque-quarto.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Suíte com porcelanato marmorizado de grande formato"></div>
+        <div class="piso__c">
+          <h3 class="h3">Porcelanato</h3>
+          <p>É a maior superfície contínua do projeto e a que estabelece o tom de tudo o que vem
+            depois. Trabalhamos das linhas marmorizadas de grande formato aos acabamentos acetinados
+            e naturais, em peças que você vê inteiras, sob a luz do showroom, antes de decidir.</p>
+          <ul class="piso__l">
+            <li>Grande formato e peças retificadas</li>
+            <li>Linhas marmorizadas, cimentícias e amadeiradas</li>
+            <li>Acabamento polido, acetinado ou natural</li>
+          </ul>
+        </div>
+      </article>
+      <article class="piso">
+        <div class="piso__f"><img src="assets/img/ambientes/a-estar.webp" width="900" height="643" loading="lazy" decoding="async" alt="Sala de estar com piso de desenho amadeirado"></div>
+        <div class="piso__c">
+          <h3 class="h3">Piso vinílico</h3>
+          <p>Conforto térmico e acústico, instalação limpa e um desenho de madeira que convence de
+            perto. É a escolha de quem quer aquecer o ambiente sem obra pesada, e nós ajudamos a
+            acertar a régua, a tonalidade e o rodapé que conversam com o restante do projeto.</p>
+          <ul class="piso__l">
+            <li>Régua larga e desenho amadeirado realista</li>
+            <li>Conforto térmico e acústico</li>
+            <li>Instalação sem quebra-quebra</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="acoes acoes--centro" style="margin-top:clamp(2.4rem,4vw,3.2rem)">
+      <a class="btn btn--wa" data-wa="Ola! Vim pelo site da Toque & Retoque e queria ver as opcoes de porcelanato e piso vinilico." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Conversar com um especialista
+      </a>
     </div>
   </div>
 </section>
+
 
 <!-- ambientes ------------------------------------------------------------- -->
 <section class="sec" id="ambientes">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">Ambientes montados<br>com material daqui</h2>
-      <p class="lead">Sala, cozinha, suíte, lavabo, hall. Projetos de arquitetos da região que
-        escolheram os acabamentos nas nossas lojas.</p>
+      <h2 class="h2">Projetos com personalidade<br>e com o nosso Toque</h2>
+      <p class="lead">Sala, eletros, suíte, lavabo, hall. Projetos assinados por arquitetos da região,
+        com acabamentos especificados junto com a nossa equipe.</p>
     </div>
     <div class="gal" data-sobe style="margin-top:clamp(2.4rem,4vw,3.4rem)">
       <figure><img src="assets/img/ambientes/a-estar.webp" width="900" height="643" loading="lazy" decoding="async" alt="Sala de estar com parede em porcelanato marmorizado"><figcaption>Sala de estar</figcaption></figure>
@@ -208,7 +246,7 @@
       <figure><img src="assets/img/ambientes/a-lavabo.webp" width="900" height="900" loading="lazy" decoding="async" alt="Lavabo com bancada em pedra e espelho iluminado"><figcaption>Lavabo</figcaption></figure>
       <figure><img src="assets/img/ambientes/a-quarto.webp" width="900" height="600" loading="lazy" decoding="async" alt="Suíte com banheira e revestimento marmorizado"><figcaption>Suíte</figcaption></figure>
       <figure><img src="assets/img/ambientes/a-hexagonal.webp" width="900" height="600" loading="lazy" decoding="async" alt="Parede com revestimento hexagonal em relevo"><figcaption>Revestimento em relevo</figcaption></figure>
-      <figure><img src="assets/img/ambientes/a-cozinha.webp" width="710" height="470" loading="lazy" decoding="async" alt="Cozinha planejada com eletrodomésticos embutidos"><figcaption>Cozinha</figcaption></figure>
+      <figure><img src="assets/img/ambientes/a-cozinha.webp" width="710" height="470" loading="lazy" decoding="async" alt="Cozinha com eletrodomésticos embutidos e acabamento integrado"><figcaption>Eletros</figcaption></figure>
       <figure><img src="assets/img/ambientes/a-hall.webp" width="900" height="1350" loading="lazy" decoding="async" alt="Hall de entrada claro com espelho redondo"><figcaption>Hall de entrada</figcaption></figure>
       <figure><img src="assets/img/ambientes/a-texturas.webp" width="900" height="600" loading="lazy" decoding="async" alt="Painéis de revestimento texturizado em tons escuros"><figcaption>Texturas</figcaption></figure>
     </div>
@@ -228,9 +266,10 @@
 <section class="sec esc" style="background:var(--azul-esc)">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">Venha ver de perto<br>antes de decidir</h2>
-      <p class="lead">Nossos showrooms têm as linhas montadas em ambiente real, com louça, metal
-        e revestimento no mesmo lugar, do jeito que vão ficar na sua obra.</p>
+      <h2 class="h2">O acabamento certo<br>se decide de perto</h2>
+      <p class="lead">Nossos showrooms apresentam as linhas montadas em ambiente real, com louça,
+        metal e revestimento compondo entre si. É onde a escolha deixa de ser suposição e passa a
+        ser decisão, com a nossa equipe ao seu lado.</p>
     </div>
   </div>
   <div class="vitrine" data-sobe>
@@ -261,35 +300,45 @@
   <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,0 C400,74 1040,74 1440,0 L1440,80 L0,80 Z" fill="#FCFBFA"/></svg>
 </div>
 
-<!-- equipes ---------------------------------------------------------------
-     A parte mais humana do site antigo era "Conheca nossa familia", com as
-     equipes em circulo. Vale manter: numa compra de ticket alto e presencial,
-     saber quem vai te atender pesa. -->
-<section class="sec">
+<!-- atendimento -----------------------------------------------------------
+     Substitui a antiga secao de fotos de equipe. O cliente informou que os
+     times mudaram em todas as lojas e pediu sugestao, com a copy voltada ao
+     atendimento especializado e consultivo. Mostrar o METODO comunica isso
+     melhor do que uma foto posada, e nao depende de material novo. Quando as
+     fotos de atendimento chegarem, cada etapa comporta uma imagem. -->
+<section class="sec" id="atendimento">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">Quem vai te<br>atender na loja</h2>
-      <p class="lead">Uma empresa de família, com equipe própria em cada cidade. Não é call center
-        nem atendente de plantão: é gente que conhece o estoque de cor.</p>
+      <h2 class="h2">Um atendimento que começa<br>antes da escolha</h2>
+      <p class="lead">Acabamento não se vende por catálogo, se orienta. Este é o percurso que
+        fazemos com cada cliente, do primeiro contato à entrega na obra.</p>
     </div>
-    <div class="equipes" data-sobe>
-      <div class="equipe">
-        <div class="equipe__f"><img src="assets/img/equipes/e-taquara.webp" width="640" height="640" loading="lazy" decoding="async" alt="Equipe da loja de Taquara"></div>
-        <b>Taquara<span>equipe da loja</span></b>
-      </div>
-      <div class="equipe">
-        <div class="equipe__f"><img src="assets/img/equipes/e-gramado.webp" width="640" height="640" loading="lazy" decoding="async" alt="Equipe da loja de Gramado"></div>
-        <b>Gramado<span>equipe da loja</span></b>
-      </div>
-      <div class="equipe">
-        <div class="equipe__f"><img src="assets/img/equipes/e-novohamburgo.webp" width="640" height="640" loading="lazy" decoding="async" alt="Equipe da loja de Novo Hamburgo"></div>
-        <b>Novo Hamburgo<span>equipe da loja</span></b>
-      </div>
-      <div class="equipe">
-        <div class="equipe__f"><img src="assets/img/equipes/e-diretores.webp" width="640" height="640" loading="lazy" decoding="async" alt="Adair e Eliane, diretores da Toque &amp; Retoque"></div>
-        <b>Adair e Eliane<span>direção</span></b>
-      </div>
-    </div>
+    <ol class="etapas" data-sobe>
+      <li class="etapa">
+        <span class="etapa__n">01</span>
+        <h3 class="h3">Entender o projeto</h3>
+        <p>Antes de apresentar qualquer produto, queremos conhecer o ambiente, o estilo pretendido
+          e o momento da obra. Uma planta, uma referência ou a foto do espaço já bastam para começar.</p>
+      </li>
+      <li class="etapa">
+        <span class="etapa__n">02</span>
+        <h3 class="h3">Selecionar as opções certas</h3>
+        <p>Nossa equipe reúne as linhas que fazem sentido para o seu caso, dentro do investimento
+          previsto, e apresenta as composições que funcionam bem juntas.</p>
+      </li>
+      <li class="etapa">
+        <span class="etapa__n">03</span>
+        <h3 class="h3">Ver de perto e decidir</h3>
+        <p>No showroom você compara os acabamentos compondo entre si, sob luz real, e leva amostra
+          para conferir na própria obra antes de fechar.</p>
+      </li>
+      <li class="etapa">
+        <span class="etapa__n">04</span>
+        <h3 class="h3">Acompanhar até a entrega</h3>
+        <p>Confirmamos quantidade, prazo e data de entrega no endereço da obra. Depois da compra,
+          seguimos à disposição para o que o projeto precisar.</p>
+      </li>
+    </ol>
     <div class="acoes acoes--centro" style="margin-top:clamp(2.4rem,4vw,3.2rem)">
       <a class="btn btn--wa" data-wa="Ola! Vim pelo site da Toque & Retoque e queria falar com alguem da equipe." href="#">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
@@ -303,9 +352,9 @@
 <section class="sec" id="lojas" style="background:var(--papel-2)">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">Três lojas no<br>Rio Grande do Sul</h2>
-      <p class="lead">Escolha a mais perto de você. Em todas tem estoque, showroom montado e
-        equipe para atender do orçamento à entrega.</p>
+      <h2 class="h2">Três showrooms no<br>Rio Grande do Sul</h2>
+      <p class="lead">Escolha o mais perto de você. Em todos há ambientes montados e equipe para orientar
+        a sua escolha. A distribuição sai da nossa central em Taquara e atende toda a região.</p>
     </div>
     <div class="lojas" data-sobe style="margin-top:clamp(2.4rem,4vw,3.4rem)">
       <article class="loja">
@@ -349,34 +398,34 @@
 <section class="sec">
   <div class="wrap">
     <div class="cab cab--centro" data-sobe>
-      <h2 class="h2">O que perguntam<br>antes de fechar</h2>
+      <h2 class="h2">Perguntas<br>frequentes</h2>
     </div>
     <div class="faq" data-sobe style="margin-top:clamp(2.2rem,3.6vw,3rem)">
-      <details><summary>Quanto custa o metro quadrado?</summary>
-        <p>Depende da linha, do formato e do acabamento, e a faixa é larga. Em vez de chutar um
-          valor que não serve para o seu caso, mande pelo WhatsApp o que você precisa revestir e a
-          metragem aproximada. Retornamos com opções em faixas de preço diferentes, para você
-          comparar antes de decidir.</p></details>
-      <details><summary>Tem em estoque para pronta-entrega?</summary>
-        <p>É por isso que mantemos estoque próprio nas três lojas. Os modelos de maior saída
-          costumam sair na hora. Para metragens grandes vale confirmar a quantidade antes de fechar
-          o cronograma da obra, porque um lote precisa ser da mesma tonalidade.</p></details>
-      <details><summary>Entregam na minha cidade?</summary>
-        <p>Entregamos em Taquara, Gramado, Novo Hamburgo e em toda a região. Para endereços fora
-          dessa área, o frete é calculado à parte. Fale com a gente com o endereço da obra em mãos
-          que retornamos com o prazo e o custo fechados.</p></details>
-      <details><summary>Consigo levar uma amostra antes?</summary>
-        <p>Sim. Levar a peça para ver na luz da própria obra é o jeito mais seguro de escolher,
-          porque a iluminação muda bastante a percepção do tom. Passe em uma das lojas ou peça pelo
-          WhatsApp que separamos as amostras da linha que você está considerando.</p></details>
-      <details><summary>Vocês entregam instalado?</summary>
-        <p>Trabalhamos com indicação de profissionais da região que já conhecem os materiais que
-          vendemos. Você também pode levar só o material, se já tiver o seu assentador. Nesse caso
-          orientamos sobre a argamassa e o rejunte certos para cada linha.</p></details>
-      <details><summary>Atendem arquitetos e designers?</summary>
-        <p>Boa parte do que sai das nossas lojas vem de projeto assinado. Temos atendimento
-          específico para profissionais, com apoio na especificação, reserva de lote e condições
-          para o cliente do projeto. Fale com a gente para conhecer as condições.</p></details>
+      <details><summary>Como funciona o orçamento?</summary>
+        <p>O valor varia conforme a linha, o formato e o acabamento escolhidos. Envie pelo WhatsApp
+          o ambiente que pretende revestir e a metragem aproximada: nossa equipe retorna com opções
+          em diferentes faixas de investimento, para você comparar com calma antes de decidir.</p></details>
+      <details><summary>O que vocês têm disponível a pronta entrega?</summary>
+        <p>Boa parte do nosso mix está disponível a pronta entrega, com a distribuição saindo da
+          nossa central em Taquara. As linhas de maior saída costumam ter disponibilidade imediata.
+          Consulte a nossa equipe com o produto e a metragem em mãos: confirmamos a disponibilidade
+          e o prazo antes de você fechar o cronograma da obra.</p></details>
+      <details><summary>Vocês entregam na minha cidade?</summary>
+        <p>A distribuição sai da nossa central em Taquara e atende Gramado, Novo Hamburgo e toda a
+          região. Para endereços fora dessa área, o frete é calculado à parte. Informe o endereço da
+          obra e retornamos com prazo e custo fechados.</p></details>
+      <details><summary>Posso levar uma amostra antes de decidir?</summary>
+        <p>Sim, e recomendamos. A iluminação altera bastante a percepção do tom, e ver a peça na luz
+          da própria obra é a forma mais segura de escolher. Visite um dos showrooms ou solicite pelo
+          WhatsApp que separamos as amostras das linhas que você está considerando.</p></details>
+      <details><summary>Vocês indicam profissional para a instalação?</summary>
+        <p>Sim. Trabalhamos com profissionais da região que já conhecem os materiais que vendemos.
+          Se você já tem o seu assentador, também levamos apenas o material, com orientação sobre a
+          argamassa e o rejunte adequados a cada linha.</p></details>
+      <details><summary>Vocês atendem arquitetos e designers?</summary>
+        <p>Boa parte do que sai dos nossos showrooms vem de projeto assinado. Mantemos atendimento
+          dedicado a profissionais, com apoio na especificação, reserva de material e condições
+          para o cliente do projeto. Fale com a nossa equipe para conhecer as condições.</p></details>
     </div>
     <div class="acoes acoes--centro" style="margin-top:clamp(2.4rem,4vw,3.2rem)">
       <a class="btn btn--wa" data-wa="Ola! Vim pelo site da Toque & Retoque e tenho uma duvida que nao estava nas perguntas." href="#">
@@ -395,17 +444,17 @@
 <section class="sec contato esc" id="contato">
   <div class="wrap contato__g">
     <div data-sobe>
-      <h2 class="h2">Conte o que você<br>precisa para a obra</h2>
+      <h2 class="h2">Conte sobre o seu<br>projeto</h2>
       <p class="lead" style="margin-top:1rem">Responda em um minuto e a conversa já começa com o seu
-        contexto na mão, sem você ter que explicar tudo de novo.</p>
+        contexto em mãos, para a nossa equipe orientar você desde a primeira mensagem.</p>
       <div class="dados">
         <a data-wa href="#">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.5z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2.1 21.9l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-          <span><b>WhatsApp</b><span>(51) 99666-8832</span></span>
+          <span><b>WhatsApp</b><span>(51) 8914-0112</span></span>
         </a>
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span><b>Lojas</b><span>Taquara, Gramado e Novo Hamburgo<br>com entrega em toda a região</span></span>
+          <span><b>Showrooms</b><span>Taquara, Gramado e Novo Hamburgo<br>com entrega em toda a região</span></span>
         </div>
         <a href="https://www.instagram.com/toqueeretoque/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -462,11 +511,12 @@
     <div class="rodape__t">
       <div class="rodape__m">
         <a href="#topo" class="marca"><img src="assets/img/logo.webp" width="620" height="277" loading="lazy" alt="Toque &amp; Retoque Acabamentos"></a>
-        <p style="font-size:.93rem;max-width:40ch">Há mais de 25 anos no Rio Grande do Sul. Porcelanatos,
-          laminados, louças e metais com estoque para pronta-entrega, showroom e entrega na região.</p>
+        <p style="font-size:.93rem;max-width:40ch">Há 29 anos no Rio Grande do Sul. Porcelanatos, pisos
+          vinílicos, laminados, louças e metais, com atendimento especializado em Taquara, Gramado
+          e Novo Hamburgo.</p>
       </div>
       <div>
-        <p class="rodape__k">Lojas</p>
+        <p class="rodape__k">Showrooms</p>
         <ul>
           <li><a data-wa="Ola! Vim pelo site da Toque & Retoque e queria falar com a loja de Taquara." href="#">Taquara</a></li>
           <li><a data-wa="Ola! Vim pelo site da Toque & Retoque e queria falar com a loja de Gramado." href="#">Gramado</a></li>
@@ -476,10 +526,10 @@
       <div>
         <p class="rodape__k">Contato</p>
         <ul>
-          <li><a data-wa href="#">(51) 99666-8832</a></li>
+          <li><a data-wa href="#">(51) 8914-0112</a></li>
           <li><a href="https://www.instagram.com/toqueeretoque/" target="_blank" rel="noopener">@toqueeretoque</a></li>
           <li><a href="#porcelanato">Porcelanatos</a></li>
-          <li><a href="#lojas">Nossas lojas</a></li>
+          <li><a href="#lojas">Nossos showrooms</a></li>
         </ul>
       </div>
     </div>

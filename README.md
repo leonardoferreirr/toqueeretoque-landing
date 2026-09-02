@@ -117,8 +117,12 @@ infla o LCP em cerca de 9 pontos):
 
 | | perf | a11y | BP | SEO | LCP |
 |---|---|---|---|---|---|
-| mobile | 100 | 100 | 100 | 100 | 1,0 s |
-| desktop | 100 | 100 | 100 | 100 | 0,2 s |
+| mobile | 99 | 100 | 100 | 100 | 2,0 s |
+| desktop | 99 | 100 | 100 | 100 | 1,0 s |
+
+Caiu de 100 para 99 quando o hero virou claro: a foto passou a ser o elemento de
+LCP real, o que antes não acontecia com o hero escuro de fundo. É o custo do
+layout que o cliente pediu, e segue acima do gate de 95.
 
 CLS zero. Duas rodadas por formato, para descartar cold start.
 
@@ -127,6 +131,36 @@ curvas com altura consistente, 10 logotipos, 4 equipes, 12 CTAs todos com o
 mesmo texto, galeria em largura única, nenhuma foto quebrada, sem overflow
 horizontal, zero erro de JS. Os caminhos de CTA testados ponta a ponta, cada um
 chegando ao WhatsApp com a sua frase.
+
+## Revisão do cliente (2026-09-02)
+
+O cliente devolveu 10 páginas de revisão. O eixo: **o público é alto padrão**, e a
+copy precisa comunicar isso. Palavras dele: os textos estavam "grosseiros" e não
+refletiam o posicionamento de loja especializada com atendimento consultivo.
+
+Correções factuais que ele apontou, e que eu tinha errado:
+
+- **São 29 anos, não 25.** Em abril de 2027 completam 30.
+- **Não há estoque em todas as lojas.** A distribuição sai da central em Taquara.
+  Quem compra em Novo Hamburgo não retira na hora. O correto é comunicar um mix
+  com boa parte a pronta entrega, nunca "estoque na loja".
+- **A foto que eu rotulei como equipe de Novo Hamburgo era da equipe de Palhoça.**
+- **O WhatsApp é o da loja**, não o do Raio-X.
+
+Mudanças de direção:
+
+- **Layout claro.** O hero escuro saiu: o material do próprio cliente é branco com
+  azul e laranja entrando como forma geométrica no canto, e é isso que o hero
+  reproduz agora.
+- **Headline de realização**, no lugar de "Escolheu hoje, sai hoje".
+- **Porcelanato e piso vinílico ganharam espaço próprio e lado a lado**, como no
+  Fino Acabamento, porque a dúvida real do cliente costuma ser entre um e outro.
+- **A seção de equipes virou o método de atendimento em quatro etapas.** Os times
+  mudaram em todas as lojas e o cliente pediu sugestão, com copy voltada ao
+  atendimento consultivo. Mostrar o percurso comunica isso melhor que foto posada
+  e não depende de material que ainda não existe. Quando as fotos de atendimento
+  chegarem, cada etapa comporta uma imagem.
+- **Docol saiu da faixa de marcas**, a pedido.
 
 ## A confirmar com o cliente
 
