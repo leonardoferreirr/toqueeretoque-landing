@@ -175,3 +175,25 @@ zero erro de JS.
   Confirmar se todas as marcas seguem ativas como parceiras antes de publicar.
 - **A Deca aparece no briefing mas não tem logotipo** na biblioteca deles, então
   ficou fora da faixa. Se for parceira ativa, vale pedir o arquivo.
+
+## Direção visual (2026-09-02)
+
+O site foi refeito sobre a gramática de um site de arquitetura que o cliente
+aprovou como referência: fundo escuro dominante, fotografia ocupando a tela,
+tipografia leve e muito respiro entre os blocos.
+
+- **O azul da marca entra escurecido e dessaturado** (`#070d1c` a `#111b33`),
+  quase um preto com temperatura. Azul chapado competia com o bege e o cinza
+  das fotos de porcelanato e mármore, que são o assunto da página.
+- **Títulos em peso 300.** O premium aqui vem do respiro e da foto, não do
+  peso da fonte. A Archivo saiu do desenho; ficou só a Manrope.
+- **O laranja é o único acento.** Sobre o escuro ele dá 5,2:1 e pode ser
+  texto; no botão vira superfície com tinta escura por cima, que também dá
+  5,2:1. Laranja com texto branco reprovaria em contraste.
+- **Botão é retângulo mais quadrado com a seta**, separados, como na
+  referência. É a assinatura visual da página.
+- **Cuidado ao mexer nas seções claras:** `.sec--claro h3` vence `.loja__n` e
+  `.peca__n` por especificidade e pinta de escuro um texto que está sobre
+  gradiente escuro. Por isso essas duas regras carregam o seletor completo.
+
+Depois de editar `assets/css/site.css`, rode `python3 build.py`.
