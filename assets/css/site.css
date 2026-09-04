@@ -211,6 +211,34 @@ strong,b{font-weight:600}
 .sec:not(.sec--claro) .item li{color:var(--claro-3)}
 .item li::before{content:'';position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--laranja)}
 
+/* --- Vitrine de produtos ------------------------------------------ */
+
+.filtros{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:clamp(1.6rem,1.2rem + 1.4vw,2.4rem)}
+.filtro{padding:.6rem 1.15rem;border:1px solid var(--risco);background:transparent;color:var(--claro-2);font:500 .78rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s}
+.filtro:hover{color:var(--claro);border-color:var(--claro-3)}
+.filtro[aria-pressed=true]{background:var(--laranja);border-color:var(--laranja);color:#160801}
+
+.vitrine{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.8rem,.5rem + .8vw,1.2rem)}
+.prod{display:flex;flex-direction:column;background:var(--noite-3);border:1px solid var(--risco-2);overflow:hidden;transition:border-color .35s,transform .45s var(--curva)}
+.prod:hover{border-color:rgba(240,84,24,.45);transform:translateY(-3px)}
+.prod__f{aspect-ratio:1;overflow:hidden;background:var(--noite-2)}
+.prod__f img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--curva)}
+.prod:hover .prod__f img{transform:scale(1.05)}
+.prod__c{padding:1.1rem 1.15rem 1.25rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.prod__n{font-size:1.02rem;font-weight:500;line-height:1.25;color:var(--claro)}
+.prod__m{font-size:.83rem;color:var(--claro-3)}
+.prod__m b{color:var(--claro-2);font-weight:600}
+/* A marca propria da loja merece destaque: e o que so ela tem. */
+.prod__selo{align-self:flex-start;margin-top:.15rem;padding:.2rem .5rem;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(240,84,24,.16);color:var(--laranja-cl)}
+.prod__cta{margin-top:auto;padding-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#4ade80}
+.prod__cta svg{width:14px;height:14px;transition:transform .4s var(--curva)}
+.prod__cta:hover svg{transform:translateX(3px)}
+.vitrine__nota{margin-top:1.6rem;font-size:.88rem;color:var(--claro-3)}
+
+@media(max-width:1000px){.vitrine{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.vitrine{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.vitrine{grid-template-columns:1fr}}
+
 /* --- Metodo: passos a esquerda, fotos empilhadas a direita ------- */
 
 .metodo{display:grid;grid-template-columns:1.05fr minmax(0,.95fr);gap:clamp(2rem,1rem + 4vw,4.5rem);align-items:stretch}

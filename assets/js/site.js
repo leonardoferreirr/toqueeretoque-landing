@@ -92,6 +92,23 @@
     });
   }
 
+  /* vitrine: filtro por tipo -------------------------------------------------- */
+  var filtros = document.querySelectorAll('.filtro');
+  var vitrine = document.getElementById('vitrine');
+
+  if (filtros.length && vitrine) {
+    var produtos = vitrine.querySelectorAll('.prod');
+    filtros.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var alvo = b.dataset.filtro;
+        filtros.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+        produtos.forEach(function (p) {
+          p.hidden = alvo !== 'todos' && p.dataset.tipo !== alvo;
+        });
+      });
+    });
+  }
+
   /* ano do rodape ------------------------------------------------------------ */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
