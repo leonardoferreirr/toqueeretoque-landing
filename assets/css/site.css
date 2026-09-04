@@ -393,4 +393,8 @@ strong,b{font-weight:600}
   [data-sobe]{opacity:1;transform:none}
   [data-fade]{opacity:1}
   .vitrine{scroll-behavior:auto}
+  /* Sem a animacao, e nao com a animacao acelerada: a regra geral acima corta
+     a duracao para .01ms, o que faria a fita saltar direto para o estado final
+     e ficar parada meia volta a frente, com os logos cortados. */
+  .marcas__t{animation:none;transform:none}
 }

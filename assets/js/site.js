@@ -146,6 +146,35 @@
     });
   }
 
+  /* fita de marcas: laço sem emenda ------------------------------------------ */
+  var fita = document.getElementById('trilho-marcas');
+  var parado = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* O CSS anda a fita ate `-50% - gap/2`, que so cai em cima da copia se a
+     lista estiver duplicada. Sem a copia, a fita chega ao fim, volta ao inicio
+     e o corte aparece como um vazio depois do ultimo logo. A copia e o que
+     fecha o laço: quando a trilha andou uma lista inteira mais um vao, a copia
+     esta exatamente onde o original comecou. */
+  if (fita && !parado) {
+    Array.prototype.slice.call(fita.children).forEach(function (logo) {
+      var copia = logo.cloneNode(true);
+      copia.setAttribute('aria-hidden', 'true');
+      copia.alt = '';
+      fita.appendChild(copia);
+    });
+
+    /* Velocidade constante em vez de duracao fixa: com duracao fixa, mudar o
+       numero de marcas muda a velocidade da fita. */
+    var voltaEm = function () {
+      var meia = fita.scrollWidth / 2;
+      if (meia > 0) fita.style.setProperty('--dur', Math.round(meia / 48) + 's');
+    };
+    voltaEm();
+    /* scrollWidth so fecha depois que os logos carregam. */
+    if (document.readyState === 'complete') voltaEm();
+    else addEventListener('load', voltaEm);
+  }
+
   /* ano do rodape ------------------------------------------------------------ */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
