@@ -247,7 +247,6 @@ strong,b{font-weight:600}
 .prod__cta{margin-top:auto;padding-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#4ade80}
 .prod__cta svg{width:14px;height:14px;transition:transform .4s var(--curva)}
 .prod__cta:hover svg{transform:translateX(3px)}
-.vitrine__nota{margin-top:1.6rem;font-size:.88rem;color:var(--claro-3)}
 
 @media(max-width:1000px){.vitrine{--vis:3.25}}
 @media(max-width:760px){.vitrine{--vis:2.25}}
