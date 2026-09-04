@@ -58,7 +58,7 @@
   addEventListener('keydown', function (e) { if (e.key === 'Escape') fecha(); });
 
   /* entrada das secoes ------------------------------------------------------ */
-  var alvos = document.querySelectorAll('[data-sobe]');
+  var alvos = document.querySelectorAll('[data-sobe],[data-fade]');
   if ('IntersectionObserver' in window) {
     var obs = new IntersectionObserver(function (ents) {
       ents.forEach(function (e) {
@@ -92,12 +92,45 @@
     });
   }
 
-  /* vitrine: filtro por tipo -------------------------------------------------- */
-  var filtros = document.querySelectorAll('.filtro');
+  /* vitrine: filtro por tipo + carrossel -------------------------------------- */
   var vitrine = document.getElementById('vitrine');
 
-  if (filtros.length && vitrine) {
+  if (vitrine) {
+    var filtros = document.querySelectorAll('.filtro');
+    var setas = document.querySelectorAll('.seta');
     var produtos = vitrine.querySelectorAll('.prod');
+
+    /* O passo e medido no DOM, nao chutado: pega a distancia entre o comeco de
+       dois cartoes visiveis seguidos e anda quantos cartoes couberem inteiros.
+       Assim a seta acompanha o --vis do CSS sem repetir o numero aqui. */
+    function passoEmPx() {
+      var vis = Array.prototype.filter.call(produtos, function (p) { return !p.hidden; });
+      if (vis.length < 2) return vitrine.clientWidth;
+      var largura = vis[1].offsetLeft - vis[0].offsetLeft;
+      var cabem = Math.max(1, Math.floor(vitrine.clientWidth / largura));
+      return largura * cabem;
+    }
+
+    /* Margem de 2px: com scroll-snap e largura fracionada, o fim da trilha cai
+       em valor quebrado e a seta ficaria acesa sem ter para onde ir. */
+    function pintaSetas() {
+      var fim = vitrine.scrollWidth - vitrine.clientWidth;
+      setas.forEach(function (s) {
+        s.disabled = Number(s.dataset.passo) < 0
+          ? vitrine.scrollLeft <= 2
+          : vitrine.scrollLeft >= fim - 2;
+      });
+    }
+
+    setas.forEach(function (s) {
+      s.addEventListener('click', function () {
+        vitrine.scrollBy({ left: passoEmPx() * Number(s.dataset.passo), behavior: 'smooth' });
+      });
+    });
+    vitrine.addEventListener('scroll', pintaSetas, { passive: true });
+    addEventListener('resize', pintaSetas);
+    pintaSetas();
+
     filtros.forEach(function (b) {
       b.addEventListener('click', function () {
         var alvo = b.dataset.filtro;
@@ -105,6 +138,10 @@
         produtos.forEach(function (p) {
           p.hidden = alvo !== 'todos' && p.dataset.tipo !== alvo;
         });
+        /* Volta ao inicio: filtrar com a trilha no meio deixaria o visitante
+           olhando para um vazio, ou para o fim de uma lista que encolheu. */
+        vitrine.scrollTo({ left: 0, behavior: 'auto' });
+        pintaSetas();
       });
     });
   }

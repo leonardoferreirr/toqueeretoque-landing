@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "toqueeretoque",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "8871", "."],
+      "port": 8871,
+      "autoPort": false
+    }
+  ]
+}
