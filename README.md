@@ -176,27 +176,43 @@ zero erro de JS.
 - **A Deca aparece no briefing mas não tem logotipo** na biblioteca deles, então
   ficou fora da faixa. Se for parceira ativa, vale pedir o arquivo.
 
-## Direção visual (2026-09-02)
+## Direção visual
 
 O site foi refeito sobre a gramática de um site de arquitetura que o cliente
-aprovou como referência: fundo escuro dominante, fotografia ocupando a tela,
-tipografia leve e muito respiro entre os blocos.
+aprovou como referência: fotografia ocupando a tela, tipografia leve e muito
+respiro entre os blocos.
 
-- **O azul da marca entra escurecido e dessaturado** (`#070d1c` a `#111b33`),
-  quase um preto com temperatura. Azul chapado competia com o bege e o cinza
-  das fotos de porcelanato e mármore, que são o assunto da página.
+Em 2026-09-10 a página trocou de pele: era escura, ficou clara. O branco e o
+off-white passaram a ser o fundo, e a foto de porcelanato e mármore é que traz
+a cor. Fundo escuro competia com o bege e o cinza das fotos, que são o assunto
+da página.
+
+- **Os nomes dos tokens são herdados da versão escura.** Hoje `--noite` é o
+  fundo (branco) e `--claro` é a tinta (quase preto). O papel de cada token
+  continua o mesmo; só o valor virou. Renomear tudo mexeria em 270 regras sem
+  mudar nada na tela.
 - **Títulos em peso 300.** O premium aqui vem do respiro e da foto, não do
   peso da fonte. A Archivo saiu do desenho; ficou só a Manrope.
-- **O laranja é o único acento.** Sobre o escuro ele dá 5,2:1 e pode ser
-  texto; no botão vira superfície com tinta escura por cima, que também dá
-  5,2:1. Laranja com texto branco reprovaria em contraste.
+- **O laranja é o único acento.** No botão ele vira superfície com tinta escura
+  por cima, que dá 5,2:1. Como texto sobre branco ele dá 3,5:1: serve em título
+  grande (o `.destaque` do hero), reprova em corpo pequeno. Por isso os numerais
+  do método usam `#c94411`, que dá 4,9:1.
 - **Botão é retângulo mais quadrado com a seta**, separados, como na
   referência. É a assinatura visual da página.
-- **Cuidado ao mexer nas seções claras:** `.sec--claro h3` vence `.loja__n` e
-  `.peca__n` por especificidade e pinta de escuro um texto que está sobre
-  gradiente escuro. Por isso essas duas regras carregam o seletor completo.
+- **Os 9 logotipos das marcas são arquivos brancos**, feitos para o fundo
+  escuro da primeira versão. Em fundo claro eles sumiriam: `filter:brightness(0)`
+  os leva a preto e a opacidade devolve o cinza que a fita pede. Trocar um
+  arquivo por um logotipo colorido exige tirar o filtro daquele item.
+- **O que fica sobre foto continua claro.** As legendas da galeria e das lojas
+  ficam por cima de um gradiente escuro; se seguissem a tinta da página, sumiriam.
+  São as únicas regras que ainda pintam de branco.
 
 Depois de editar `assets/css/site.css`, rode `python3 build.py`.
+
+**O `site.css` é a fonte da verdade, e o `build.py` sobrescreve o `<style>` do
+`index.html` com ele.** Editar o CSS direto no `index.html` funciona até alguém
+rodar o build, e aí a edição some. Já aconteceu: a fita do Instagram inteira
+ficou só no `index.html` por uma semana.
 
 ## Fita do Instagram
 
@@ -209,7 +225,7 @@ grade anônima para nos doze primeiros posts, então isto é uma fotografia do
 perfil naquele dia. Para atualizar: trocar os arquivos em `assets/img/insta/` e
 a lista `POSTS` no `assets/js/site.js`.
 
-**Depois de mexer no `site.js`, rode `python3 build-v2.py`.** O `vercel.json`
+**Depois de mexer no `site.js`, rode `python3 build.py`.** O `vercel.json`
 serve `/assets/*` como `immutable` por um ano, então quem já visitou o site
 guarda o script por um ano. A única forma de entregar uma versão nova é mudar a
 URL, e a URL só muda pelo carimbo `?v=` que o script recalcula a partir do hash
@@ -217,23 +233,15 @@ do arquivo. Editar o `site.js` sem carimbar deixa todo visitante antigo com o
 script velho, e o sintoma é exatamente este: funciona em aba anônima e não
 funciona no navegador de quem já entrou antes.
 
-## Versão v2, em fundo claro
+## A versão escura e a `/v2`
 
-`/v2` é a mesma página do início ao fim, com a mesma copy, a mesma estrutura e o
-mesmo JavaScript. Só muda a pele: tudo em branco e off-white, mais minimalista.
+Até 2026-09-10 existiam duas: a principal em fundo escuro e uma `/v2` em fundo
+claro, gerada por um `build-v2.py` que injetava um bloco de override no fim do
+`<style>`. O cliente escolheu a clara, então ela virou a página oficial: a
+paleta desceu para dentro do `site.css`, o override e o `build-v2.py` foram
+apagados e `/v2` passou a redirecionar para `/` no `vercel.json`, porque o
+link circulou.
 
-Ela é **gerada**, não copiada:
-
-```bash
-python3 build-v2.py
-```
-
-Rodar sempre que o `index.html` mudar, senão as duas versões divergem. O script
-injeta um bloco de override no fim do `<style>`, sobe um nível nos caminhos
-relativos (a v2 mora em `/v2`) e marca a página como `noindex`, para não
-competir com a principal no Google. É por isso que o Lighthouse dela dá SEO 69:
-é o `noindex`, e é intencional.
-
-Um detalhe que a troca de pele exigiu: o cinza de apoio do tema escuro
-(`#767d8a`) dá 3,97:1 sobre branco e reprova em AA. Na v2 ele desce para
-`#6a7180`, o que resolve rótulos, rodapé e ficha de produto de uma vez.
+Se um dia precisar de duas peles de novo, o caminho é o mesmo: os tokens do
+`:root` cobrem quase tudo, e o que sobra são as regras que fixam cor na mão
+(véu do hero, filtros de logotipo, textos sobre foto).
