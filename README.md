@@ -200,14 +200,22 @@ Depois de editar `assets/css/site.css`, rode `python3 build.py`.
 
 ## Fita do Instagram
 
-Onze posts do perfil, recortados em quadrado e servidos como WebP do nosso
-próprio domínio (`assets/img/insta/`). Sem iframe, sem script de terceiro e sem
+Onze posts do perfil, recortados em 4:5 e servidos como WebP do nosso próprio
+domínio (`assets/img/insta/`). Sem iframe, sem script de terceiro e sem
 requisição saindo do site, que é o que mantém a página em 100.
 
 Não é um feed ao vivo. O Instagram passou a exigir login na API pública e a
 grade anônima para nos doze primeiros posts, então isto é uma fotografia do
 perfil naquele dia. Para atualizar: trocar os arquivos em `assets/img/insta/` e
 a lista `POSTS` no `assets/js/site.js`.
+
+**Depois de mexer no `site.js`, rode `python3 build-v2.py`.** O `vercel.json`
+serve `/assets/*` como `immutable` por um ano, então quem já visitou o site
+guarda o script por um ano. A única forma de entregar uma versão nova é mudar a
+URL, e a URL só muda pelo carimbo `?v=` que o script recalcula a partir do hash
+do arquivo. Editar o `site.js` sem carimbar deixa todo visitante antigo com o
+script velho, e o sintoma é exatamente este: funciona em aba anônima e não
+funciona no navegador de quem já entrou antes.
 
 ## Versão v2, em fundo claro
 

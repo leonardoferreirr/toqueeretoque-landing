@@ -14,6 +14,7 @@ O que o script faz:
   3. corrige os caminhos relativos, ja que a v2 mora em /v2
   4. troca o theme-color e a canonical
 """
+import hashlib
 import os
 import re
 
@@ -127,7 +128,27 @@ h1,h2,h3{color:var(--tinta)}
 """
 
 
+def carimbar_versao():
+    """Carimba no index.html o hash do site.js.
+
+    O vercel.json serve /assets/* como immutable por um ano, entao quem ja
+    visitou o site guarda o JS por um ano. O unico jeito de entregar uma versao
+    nova e mudar a URL, e a URL so muda se este carimbo mudar. Editar o site.js
+    sem carimbar deixa todo visitante antigo com o script velho.
+    """
+    js = os.path.join(RAIZ, "assets", "js", "site.js")
+    h = hashlib.sha1(open(js, "rb").read()).hexdigest()[:10]
+    caminho = os.path.join(RAIZ, "index.html")
+    s = open(caminho, encoding="utf-8").read()
+    novo = re.sub(r"site\.js\?v=[0-9a-f]+", f"site.js?v={h}", s)
+    if novo != s:
+        open(caminho, "w", encoding="utf-8").write(novo)
+        print(f"site.js carimbado como v={h}")
+    return h
+
+
 def gerar():
+    carimbar_versao()
     origem = os.path.join(RAIZ, "index.html")
     destino_dir = os.path.join(RAIZ, "v2")
     os.makedirs(destino_dir, exist_ok=True)
