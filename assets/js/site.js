@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var NUM = '5551996668832';
+  var NUM = '5551989140112';
   var MSG = 'Ola! Vim pelo site da Toque & Retoque e quero um orcamento.';
 
   /* Todo CTA passa por obrigado.html antes de abrir a conversa: a pagina
