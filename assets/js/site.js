@@ -193,7 +193,7 @@
         var url = 'https://www.instagram.com/toqueeretoque/' + partes[1] + '/' + partes[0] + '/';
         var n = ('0' + (i + 1)).slice(-2);
         return '<a href="' + url + '" target="_blank" rel="noopener" aria-label="Ver esta publicacao no Instagram">' +
-               '<img src="assets/img/insta/i-' + n + '.webp" width="460" height="460" alt="" loading="lazy" decoding="async"></a>';
+               '<img src="/assets/img/insta/i-' + n + '.webp" width="460" height="460" alt="" loading="lazy" decoding="async"></a>';
       }).join('');
       feedInsta.innerHTML = itens + itens;
     };

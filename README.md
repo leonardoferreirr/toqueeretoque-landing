@@ -197,3 +197,35 @@ tipografia leve e muito respiro entre os blocos.
   gradiente escuro. Por isso essas duas regras carregam o seletor completo.
 
 Depois de editar `assets/css/site.css`, rode `python3 build.py`.
+
+## Fita do Instagram
+
+Onze posts do perfil, recortados em quadrado e servidos como WebP do nosso
+próprio domínio (`assets/img/insta/`). Sem iframe, sem script de terceiro e sem
+requisição saindo do site, que é o que mantém a página em 100.
+
+Não é um feed ao vivo. O Instagram passou a exigir login na API pública e a
+grade anônima para nos doze primeiros posts, então isto é uma fotografia do
+perfil naquele dia. Para atualizar: trocar os arquivos em `assets/img/insta/` e
+a lista `POSTS` no `assets/js/site.js`.
+
+## Versão v2, em fundo claro
+
+`/v2` é a mesma página do início ao fim, com a mesma copy, a mesma estrutura e o
+mesmo JavaScript. Só muda a pele: tudo em branco e off-white, mais minimalista.
+
+Ela é **gerada**, não copiada:
+
+```bash
+python3 build-v2.py
+```
+
+Rodar sempre que o `index.html` mudar, senão as duas versões divergem. O script
+injeta um bloco de override no fim do `<style>`, sobe um nível nos caminhos
+relativos (a v2 mora em `/v2`) e marca a página como `noindex`, para não
+competir com a principal no Google. É por isso que o Lighthouse dela dá SEO 69:
+é o `noindex`, e é intencional.
+
+Um detalhe que a troca de pele exigiu: o cinza de apoio do tema escuro
+(`#767d8a`) dá 3,97:1 sobre branco e reprova em AA. Na v2 ele desce para
+`#6a7180`, o que resolve rótulos, rodapé e ficha de produto de uma vez.
