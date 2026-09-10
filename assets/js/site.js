@@ -92,21 +92,28 @@
     });
   }
 
-  /* vitrine: filtro por tipo + carrossel -------------------------------------- */
-  var vitrine = document.getElementById('vitrine');
+  /* vitrines: uma trilha por familia de produto ------------------------------- */
 
-  if (vitrine) {
-    var filtros = document.querySelectorAll('.filtro');
-    var setas = document.querySelectorAll('.seta');
+  /* Antes era uma trilha so, com filtros por cima. Virou uma trilha por
+     familia: quem chega ve porcelanato e laminado ao mesmo tempo, sem
+     precisar descobrir que o filtro existe. Por isso este bloco atende N
+     trilhas: cada `.trilha` tem a sua vitrine e o seu par de setas, e as
+     setas apontam para a vitrine pelo aria-controls. */
+  var repinta = [];
+
+  document.querySelectorAll('.trilha').forEach(function (trilha) {
+    var vitrine = trilha.querySelector('.vitrine');
+    var setas = trilha.querySelectorAll('.seta');
+    if (!vitrine || !setas.length) return;
+
     var produtos = vitrine.querySelectorAll('.prod');
 
     /* O passo e medido no DOM, nao chutado: pega a distancia entre o comeco de
-       dois cartoes visiveis seguidos e anda quantos cartoes couberem inteiros.
-       Assim a seta acompanha o --vis do CSS sem repetir o numero aqui. */
+       dois cartoes seguidos e anda quantos cartoes couberem inteiros. Assim a
+       seta acompanha o --vis do CSS sem repetir o numero aqui. */
     function passoEmPx() {
-      var vis = Array.prototype.filter.call(produtos, function (p) { return !p.hidden; });
-      if (vis.length < 2) return vitrine.clientWidth;
-      var largura = vis[1].offsetLeft - vis[0].offsetLeft;
+      if (produtos.length < 2) return vitrine.clientWidth;
+      var largura = produtos[1].offsetLeft - produtos[0].offsetLeft;
       var cabem = Math.max(1, Math.floor(vitrine.clientWidth / largura));
       return largura * cabem;
     }
@@ -128,21 +135,13 @@
       });
     });
     vitrine.addEventListener('scroll', pintaSetas, { passive: true });
-    addEventListener('resize', pintaSetas);
+    repinta.push(pintaSetas);
     pintaSetas();
+  });
 
-    filtros.forEach(function (b) {
-      b.addEventListener('click', function () {
-        var alvo = b.dataset.filtro;
-        filtros.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
-        produtos.forEach(function (p) {
-          p.hidden = alvo !== 'todos' && p.dataset.tipo !== alvo;
-        });
-        /* Volta ao inicio: filtrar com a trilha no meio deixaria o visitante
-           olhando para um vazio, ou para o fim de uma lista que encolheu. */
-        vitrine.scrollTo({ left: 0, behavior: 'auto' });
-        pintaSetas();
-      });
+  if (repinta.length) {
+    addEventListener('resize', function () {
+      repinta.forEach(function (f) { f(); });
     });
   }
 

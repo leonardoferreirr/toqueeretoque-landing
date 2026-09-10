@@ -214,6 +214,35 @@ Depois de editar `assets/css/site.css`, rode `python3 build.py`.
 rodar o build, e aí a edição some. Já aconteceu: a fita do Instagram inteira
 ficou só no `index.html` por uma semana.
 
+## As duas trilhas de produto
+
+Porcelanato e laminado ficam em trilhas separadas, uma embaixo da outra, cada
+uma com o seu rótulo e o seu par de setas. Antes era uma trilha só com filtros
+por cima (Todos / Porcelanatos / Laminados), e o filtro tinha um problema: quem
+chegava via só a lista misturada e precisava descobrir que o filtro existia
+para entender que são duas famílias de produto. Separado, a página diz isso
+sozinha.
+
+O JavaScript atende N trilhas: percorre cada `.trilha`, acha a `.vitrine` e as
+`.seta` dentro dela e monta um carrossel independente. Para acrescentar uma
+terceira família, basta copiar o bloco e dar outro `id` à vitrine.
+
+Duas coisas para não repetir:
+
+- **O `--vis` da vitrine controla o tamanho do cartão**, não a largura em px.
+  Ele diz quantos cartões cabem na tela, e o valor quebrado (5,25 e não 5)
+  deixa um pedaço do próximo aparecendo, que é o que avisa que a lista
+  continua. No celular são 1,75.
+- **A trilha que carrega uma âncora não pode carregar o `data-sobe`.** O reveal
+  aplica `translateY(22px)`, o navegador rola até a posição deslocada e o
+  rótulo termina embaixo do menu fixo. Por isso o `data-sobe` vive na `.barra`,
+  e o `scroll-margin-top` vale para `section[id]` **e** `.trilha[id]`.
+
+O rótulo da trilha é `h3` e o nome do produto é `h4`. Se voltar para `h3`, os
+dois passam a competir na hierarquia; e se mudar de nível de novo, lembre que a
+regra base de tipografia precisa incluir a tag, senão o nome do produto ganha a
+margem padrão do navegador.
+
 ## Fita do Instagram
 
 Onze posts do perfil, recortados em 4:5 e servidos como WebP do nosso próprio

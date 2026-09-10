@@ -63,11 +63,13 @@ p{margin:0}
 .oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .oculto:focus-visible{position:fixed;top:.7rem;left:.7rem;z-index:200;width:auto;height:auto;padding:.8rem 1.2rem;clip-path:none;background:var(--laranja);color:#12060a;font-weight:600;text-decoration:none}
 :focus-visible{outline:2px solid var(--laranja);outline-offset:3px}
-section[id]{scroll-margin-top:calc(var(--alt-nav) + 1rem)}
+/* Vale para qualquer alvo de ancora, nao so para <section>: a trilha de
+   laminados e uma div com id, e sem isso o menu a deixava embaixo do nav. */
+section[id],.trilha[id]{scroll-margin-top:calc(var(--alt-nav) + 1rem)}
 
 /* --- Tipografia -------------------------------------------------- */
 
-h1,h2,h3{margin:0;font-weight:300;line-height:1.1;letter-spacing:-.022em;text-wrap:balance}
+h1,h2,h3,h4{margin:0;font-weight:300;line-height:1.1;letter-spacing:-.022em;text-wrap:balance}
 h1{font-size:clamp(2.15rem,1.3rem + 3.4vw,4rem)}
 h2{font-size:clamp(1.85rem,1.2rem + 2.5vw,3.1rem)}
 h3{font-size:clamp(1.15rem,1rem + .6vw,1.5rem);font-weight:400}
@@ -205,14 +207,13 @@ strong,b{font-weight:600}
 
 /* --- Vitrine de produtos ------------------------------------------ */
 
-/* A barra nunca quebra: quem quebra e a lista de filtros dentro dela. Se a
-   barra quebrasse, os filtros ocupariam duas linhas e as setas cairiam numa
-   terceira, sozinhas -- no celular isso custava 137px de altura por nada. */
-.barra{display:flex;align-items:center;gap:1rem;flex-wrap:nowrap;margin-bottom:clamp(1.6rem,1.2rem + 1.4vw,2.4rem)}
-.filtros{display:flex;flex-wrap:wrap;gap:.5rem;flex:1 1 auto;min-width:0}
-.filtro{padding:.6rem 1.15rem;border:1px solid rgba(11,18,36,.16);background:transparent;color:var(--claro-2);font:500 .78rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s}
-.filtro:hover{color:var(--claro);border-color:var(--claro-3)}
-.filtro[aria-pressed=true]{background:var(--laranja);border-color:var(--laranja);color:#160801}
+/* Uma trilha por familia de produto. A segunda respira em relacao a primeira,
+   senao as duas leem como uma lista so que quebrou no meio. */
+.trilha + .trilha{margin-top:clamp(2.2rem,1.6rem + 2.2vw,3.6rem)}
+.barra{display:flex;align-items:center;gap:1rem;flex-wrap:nowrap;margin-bottom:clamp(1rem,.8rem + .9vw,1.5rem)}
+/* O rotulo e o assunto da trilha, nao um titulo de secao: sobe de peso e
+   desce de tamanho para nao competir com o h2 logo acima. */
+.trilha__t{font-size:clamp(1.05rem,.98rem + .35vw,1.3rem);font-weight:500;letter-spacing:-.01em;flex:1 1 auto;min-width:0}
 
 .setas{display:flex;gap:.5rem;margin-left:auto;flex:none}
 .seta{display:grid;place-content:center;width:46px;height:46px;flex:none;padding:0;border:1px solid rgba(11,18,36,.16);background:transparent;color:var(--claro);cursor:pointer;transition:background-color .3s,border-color .3s,color .3s,opacity .3s}
@@ -225,7 +226,7 @@ strong,b{font-weight:600}
    corte do cartao seguinte batem sempre, em qualquer largura de tela. O valor
    quebrado (4.25 e nao 4) deixa um pedaco do proximo aparecendo, que e o que
    avisa o visitante de que a lista continua. */
-.vitrine{--vis:4.25;--gap:clamp(.8rem,.5rem + .8vw,1.2rem);display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - (var(--vis) - 1) * var(--gap)) / var(--vis));gap:var(--gap);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding-block:4px 6px}
+.vitrine{--vis:5.25;--gap:clamp(.8rem,.5rem + .8vw,1.2rem);display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - (var(--vis) - 1) * var(--gap)) / var(--vis));gap:var(--gap);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding-block:4px 6px}
 .vitrine::-webkit-scrollbar{display:none}
 .prod{scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(11,18,36,.1);overflow:hidden;transition:border-color .35s,transform .45s var(--curva)}
 .prod:hover{border-color:rgba(240,84,24,.45);transform:translateY(-3px)}
@@ -242,9 +243,11 @@ strong,b{font-weight:600}
 
 .nota{margin-top:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);text-align:center;font-size:.95rem;color:var(--claro-2);max-width:60ch;margin-inline:auto}
 
-@media(max-width:1000px){.vitrine{--vis:3.25}}
-@media(max-width:760px){.vitrine{--vis:2.25}}
-@media(max-width:520px){.vitrine{--vis:1.35}}
+@media(max-width:1000px){.vitrine{--vis:4.25}}
+@media(max-width:760px){.vitrine{--vis:3.25}}
+/* No celular o cartao mostra tres quartos do seguinte: e o que avisa que
+   a lista continua sem precisar de seta nem de texto. */
+@media(max-width:520px){.vitrine{--vis:1.75}}
 
 /* --- Metodo: passos a esquerda, fotos empilhadas a direita ------- */
 
