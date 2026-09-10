@@ -178,4 +178,31 @@
   /* ano do rodape ------------------------------------------------------------ */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
+
+  /* ===================== FITA DO INSTAGRAM =====================
+     Fotos do perfil servidas do nosso proprio dominio: sem iframe, sem script
+     de terceiro e sem custo de rede fora do site. A fita so e montada quando
+     a secao se aproxima, entao as 11 imagens nao pesam no carregamento.
+     Para atualizar: trocar os arquivos em assets/img/insta e a lista abaixo. */
+  var feedInsta = document.getElementById('feed-insta');
+  if (feedInsta) {
+    var POSTS = ['DdEd93Jk9FG/reel','Dc3ldGLDVwv/reel','Dc1ikLuje98/p','Dct1XEynPMs/reel','DctSPTvkoTl/reel','Dcd2PNHlRXn/reel','DcbCjmEH6qF/p','DcV5aJSFepf/reel','DcTlvQNE8gv/reel','DcJA_B0ja7Y/p','Db8XKSuoLP6/p'];
+    var montarFeed = function () {
+      var itens = POSTS.map(function (item, i) {
+        var partes = item.split('/');
+        var url = 'https://www.instagram.com/toqueeretoque/' + partes[1] + '/' + partes[0] + '/';
+        var n = ('0' + (i + 1)).slice(-2);
+        return '<a href="' + url + '" target="_blank" rel="noopener" aria-label="Ver esta publicacao no Instagram">' +
+               '<img src="assets/img/insta/i-' + n + '.webp" width="460" height="460" alt="" loading="lazy" decoding="async"></a>';
+      }).join('');
+      feedInsta.innerHTML = itens + itens;
+    };
+    if ('IntersectionObserver' in window) {
+      var ioFeed = new IntersectionObserver(function (e, o) {
+        if (e[0].isIntersecting) { montarFeed(); o.disconnect(); }
+      }, { rootMargin: '400px' });
+      ioFeed.observe(feedInsta.parentElement);
+    } else { montarFeed(); }
+  }
+
 })();
