@@ -4,6 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
+
+<!-- Google Tag Manager -->
+<!-- Aqui vai no head, e nao no fim do arquivo como de costume: esta pagina e
+     uma ponte de 1,5s para o WhatsApp, e a tag precisa estar de pe antes de a
+     pessoa sair. -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKBZ4JKC');
+</script>
+<!-- End Google Tag Manager -->
+
 <title>Abrindo o WhatsApp · Toque &amp; Retoque</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
@@ -30,6 +44,13 @@ a{color:#F05418}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKBZ4JKC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="caixa">
   <svg class="los" viewBox="0 0 64 64" aria-hidden="true" fill="#F05418">
     <rect x="8" y="8" width="21" height="21" rx="1.5"/>
@@ -62,26 +83,31 @@ a{color:#F05418}
   var valido = n && /^[0-9]{10,15}$/.test(n);
   var alvo = valido ? ('https://wa.me/' + n + (t ? ('?text=' + encodeURIComponent(t)) : '')) : '';
 
-  // evento de conversao: funciona quando houver GTM ou pixel, inofensivo sem
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: 'whatsapp_click', destino: 'Toque &amp; Retoque' });
-
   var manual = document.getElementById('manual'), ir = document.getElementById('ir'),
       giro = document.getElementById('giro'), msg = document.getElementById('msg');
 
   var partiu = false;
   function vai(){ if (partiu) return; partiu = true; location.href = alvo; }
 
-  // AO INSTALAR GTM/PIXEL AQUI, trocar a linha do redirecionamento por:
-  //   setTimeout(function(){ if (window.google_tag_manager) vai(); }, 1500);
-  //   setTimeout(vai, 2400);
-  // Motivo: sair da pagina mata o script que ainda nao rodou. Se a tag nao tiver
-  // carregado na hora do redirect, o clique nao e contado em lugar nenhum, e e
-  // pra contar esse clique que esta pagina existe. O teto de 2,4s garante que
-  // ninguem fique preso esperando uma tag que nunca vem.
   if (valido) {
+    /* O evento de conversao sai daqui de dentro, e nao mais do topo do arquivo.
+       Enquanto nao havia container, empurrar sempre era inofensivo; com o GTM
+       no ar, quem abrisse /obrigado direto, sem telefone na URL e sem pedido na
+       sessao, registraria uma conversao que nunca aconteceu. Conversao
+       inventada e pior do que conversao nao medida: ensina a campanha a
+       procurar a pessoa errada. */
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'whatsapp_click', destino: 'Toque & Retoque' });
+
     ir.href = alvo;
-    setTimeout(vai, 1500);
+
+    /* Sair da pagina mata o script que ainda nao rodou: se a tag nao tiver
+       carregado na hora do redirecionamento, o clique nao e contado em lugar
+       nenhum, e e para contar esse clique que esta pagina existe. Entao espera
+       o container subir, com teto de 2,4s para ninguem ficar preso esperando
+       uma tag que nunca vem. */
+    setTimeout(function(){ if (window.google_tag_manager) vai(); }, 1500);
+    setTimeout(vai, 2400);
     setTimeout(function(){ giro.style.display='none'; manual.style.display='block'; }, 3000);
   } else {
     giro.style.display='none';
